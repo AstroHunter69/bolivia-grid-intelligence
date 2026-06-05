@@ -1,0 +1,9 @@
+pandas
+numpy
+requests
+joblib
+scikit-learn
+xgboost
+matplotlib
+optuna
+reportlab

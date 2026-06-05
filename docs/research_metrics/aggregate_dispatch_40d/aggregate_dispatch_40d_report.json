@@ -1,0 +1,31 @@
+{
+  "start": "2026-04-17 00:00:00",
+  "end": "2026-05-26 23:15:00",
+  "rows": 3781,
+  "days": 40,
+  "reserve_margin": 0.03,
+  "actual_cost_proxy_usd": 51828695.41,
+  "optimized_cost_proxy_usd": 39039285.815349996,
+  "cost_proxy_saving_usd": 12789409.594649997,
+  "cost_proxy_saving_pct": 24.676310089376408,
+  "actual_renewable_share": 0.3342641757774976,
+  "optimized_renewable_share": 0.6081357102871254,
+  "renewable_mwh_increase": 334219.9703249999,
+  "thermal_mwh_reduction": 341915.80109999987,
+  "unserved_mw_max": 0.0,
+  "capacity_by_type_mw": {
+    "BIO": 125.0,
+    "EOL": 135.0,
+    "HID": 715.81,
+    "SOL": 167.57999999999998,
+    "TER": 2387.51
+  },
+  "cost_assumptions_usd_mwh": {
+    "EOL": 5.0,
+    "SOL": 5.0,
+    "BIO": 12.0,
+    "HID": 18.0,
+    "TER": 55.0
+  },
+  "note": "Technology-level 40-day dispatch simulation using aggregate generation-by-type data and CNDC static capacity detail. Cost values are simplified technology proxies."
+}

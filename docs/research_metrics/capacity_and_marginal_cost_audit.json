@@ -1,0 +1,63 @@
+{
+  "capacity_audit_by_type": [
+    {
+      "generation_type": "BIO",
+      "actual_peak_mw": 0.0,
+      "optimized_peak_mw": 0.05,
+      "actual_avg_mw": 0.0,
+      "optimized_avg_mw": 0.05,
+      "cndc_static_capacity_mw": 125.0,
+      "optimized_peak_capacity_utilization_pct": 0.04
+    },
+    {
+      "generation_type": "EOL",
+      "actual_peak_mw": 26.91,
+      "optimized_peak_mw": 26.91,
+      "actual_avg_mw": 8.72031914893617,
+      "optimized_avg_mw": 8.72031914893617,
+      "cndc_static_capacity_mw": 135.0,
+      "optimized_peak_capacity_utilization_pct": 19.933333333333334
+    },
+    {
+      "generation_type": "HID",
+      "actual_peak_mw": 520.53,
+      "optimized_peak_mw": 597.272,
+      "actual_avg_mw": 223.5945744680851,
+      "optimized_avg_mw": 597.272,
+      "cndc_static_capacity_mw": 715.81,
+      "optimized_peak_capacity_utilization_pct": 83.44001899945518
+    },
+    {
+      "generation_type": "INT",
+      "actual_peak_mw": 145.14000000000001,
+      "optimized_peak_mw": 202.57600000000002,
+      "actual_avg_mw": 51.729787234042554,
+      "optimized_avg_mw": 202.576,
+      "cndc_static_capacity_mw": NaN,
+      "optimized_peak_capacity_utilization_pct": NaN
+    },
+    {
+      "generation_type": "SOL",
+      "actual_peak_mw": 142.28,
+      "optimized_peak_mw": 142.28,
+      "actual_avg_mw": 42.486702127659576,
+      "optimized_avg_mw": 42.486702127659576,
+      "cndc_static_capacity_mw": 167.57999999999998,
+      "optimized_peak_capacity_utilization_pct": 84.90273302303379
+    },
+    {
+      "generation_type": "TER",
+      "actual_peak_mw": 1113.07,
+      "optimized_peak_mw": 612.4974000000001,
+      "actual_avg_mw": 926.0389361702128,
+      "optimized_avg_mw": 225.261305319149,
+      "cndc_static_capacity_mw": 2387.51,
+      "optimized_peak_capacity_utilization_pct": 25.65423390896792
+    }
+  ],
+  "marginal_cost_forecast_usd_mwh": {
+    "min": 15.56,
+    "mean": 16.32375,
+    "max": 16.99
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "forecast_40d": {
+    "label": "strict_recursive_day_ahead_40d",
+    "rows": 3781,
+    "days": 40,
+    "start": "2026-04-17 00:00:00",
+    "end": "2026-05-26 23:15:00",
+    "bdm_mae_mw": 35.80610396051495,
+    "cndc_mae_mw": 83.92579476329013,
+    "mae_improvement_mw": 48.119690802775175,
+    "mae_improvement_pct": 57.3359965651742,
+    "bdm_rmse_mw": 48.88707946411373,
+    "cndc_rmse_mw": 98.15812791929123,
+    "bdm_bias_mw": -19.767919705564214,
+    "cndc_bias_mw": -80.86117693731816,
+    "target_dates": [
+      "2026-04-17",
+      "2026-04-18",
+      "2026-04-19",
+      "2026-04-20",
+      "2026-04-21",
+      "2026-04-22",
+      "2026-04-23",
+      "2026-04-24",
+      "2026-04-25",
+      "2026-04-26",
+      "2026-04-27",
+      "2026-04-28",
+      "2026-04-29",
+      "2026-04-30",
+      "2026-05-01",
+      "2026-05-02",
+      "2026-05-03",
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-06",
+      "2026-05-07",
+      "2026-05-08",
+      "2026-05-09",
+      "2026-05-10",
+      "2026-05-11",
+      "2026-05-12",
+      "2026-05-13",
+      "2026-05-14",
+      "2026-05-15",
+      "2026-05-16",
+      "2026-05-17",
+      "2026-05-18",
+      "2026-05-19",
+      "2026-05-20",
+      "2026-05-21",
+      "2026-05-22",
+      "2026-05-23",
+      "2026-05-24",
+      "2026-05-25",
+      "2026-05-26"
+    ],
+    "successful_days": 40,
+    "failed_days": [],
+    "daily_win_rate_pct": 95.0,
+    "same_weekday_mae_mw": 76.82782958199357,
+    "methodology": "For each target date, actual demand on that date is masked. The model predicts the full day recursively at 15-minute resolution using target-day CNDC forecast and historical demand before the target date."
+  },
+  "rl_40d_test": {
+    "baseline_mae_mw": 73.17548898678416,
+    "q_learning_mae_mw": 30.684546255506625,
+    "mae_reduction_pct": 58.067179761452095,
+    "imbalance_cost_proxy_saving_usd": 189928.22387749996,
+    "imbalance_cost_proxy_saving_pct": 58.08981495742219,
+    "test_start": "2026-05-14 23:00:00",
+    "test_end": "2026-05-26 23:15:00",
+    "test_rows": 1135
+  },
+  "aggregate_dispatch_40d": {
+    "start": "2026-04-17 00:00:00",
+    "end": "2026-05-26 23:15:00",
+    "rows": 3781,
+    "days": 40,
+    "reserve_margin": 0.03,
+    "actual_cost_proxy_usd": 51828695.41,
+    "optimized_cost_proxy_usd": 39039285.815349996,
+    "cost_proxy_saving_usd": 12789409.594649997,
+    "cost_proxy_saving_pct": 24.676310089376408,
+    "actual_renewable_share": 0.3342641757774976,
+    "optimized_renewable_share": 0.6081357102871254,
+    "renewable_mwh_increase": 334219.9703249999,
+    "thermal_mwh_reduction": 341915.80109999987,
+    "unserved_mw_max": 0.0,
+    "capacity_by_type_mw": {
+      "BIO": 125.0,
+      "EOL": 135.0,
+      "HID": 715.81,
+      "SOL": 167.57999999999998,
+      "TER": 2387.51
+    },
+    "cost_assumptions_usd_mwh": {
+      "EOL": 5.0,
+      "SOL": 5.0,
+      "BIO": 12.0,
+      "HID": 18.0,
+      "TER": 55.0
+    },
+    "note": "Technology-level 40-day dispatch simulation using aggregate generation-by-type data and CNDC static capacity detail. Cost values are simplified technology proxies."
+  },
+  "capacity_and_marginal_cost_audit": {
+    "capacity_audit_by_type": [
+      {
+        "generation_type": "BIO",
+        "actual_peak_mw": 0.0,
+        "optimized_peak_mw": 0.05,
+        "actual_avg_mw": 0.0,
+        "optimized_avg_mw": 0.05,
+        "cndc_static_capacity_mw": 125.0,
+        "optimized_peak_capacity_utilization_pct": 0.04
+      },
+      {
+        "generation_type": "EOL",
+        "actual_peak_mw": 26.91,
+        "optimized_peak_mw": 26.91,
+        "actual_avg_mw": 8.72031914893617,
+        "optimized_avg_mw": 8.72031914893617,
+        "cndc_static_capacity_mw": 135.0,
+        "optimized_peak_capacity_utilization_pct": 19.933333333333334
+      },
+      {
+        "generation_type": "HID",
+        "actual_peak_mw": 520.53,
+        "optimized_peak_mw": 597.272,
+        "actual_avg_mw": 223.5945744680851,
+        "optimized_avg_mw": 597.272,
+        "cndc_static_capacity_mw": 715.81,
+        "optimized_peak_capacity_utilization_pct": 83.44001899945518
+      },
+      {
+        "generation_type": "INT",
+        "actual_peak_mw": 145.14000000000001,
+        "optimized_peak_mw": 202.57600000000002,
+        "actual_avg_mw": 51.729787234042554,
+        "optimized_avg_mw": 202.576,
+        "cndc_static_capacity_mw": NaN,
+        "optimized_peak_capacity_utilization_pct": NaN
+      },
+      {
+        "generation_type": "SOL",
+        "actual_peak_mw": 142.28,
+        "optimized_peak_mw": 142.28,
+        "actual_avg_mw": 42.486702127659576,
+        "optimized_avg_mw": 42.486702127659576,
+        "cndc_static_capacity_mw": 167.57999999999998,
+        "optimized_peak_capacity_utilization_pct": 84.90273302303379
+      },
+      {
+        "generation_type": "TER",
+        "actual_peak_mw": 1113.07,
+        "optimized_peak_mw": 612.4974000000001,
+        "actual_avg_mw": 926.0389361702128,
+        "optimized_avg_mw": 225.261305319149,
+        "cndc_static_capacity_mw": 2387.51,
+        "optimized_peak_capacity_utilization_pct": 25.65423390896792
+      }
+    ],
+    "marginal_cost_forecast_usd_mwh": {
+      "min": 15.56,
+      "mean": 16.32375,
+      "max": 16.99
+    }
+  }
+}

@@ -1,0 +1,36 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Model binaries and private datasets
+models/*.pkl
+models/*.joblib
+models/*.json
+data/cache/
+data/raw/
+data/processed/
+
+# Generated outputs
+runs/*
+!runs/apr17_may26_40d_aggregate_q_learning/
+!runs/apr17_may26_40d_aggregate_q_learning/q_learning_summary.csv
+!runs/apr17_may26_40d_aggregate_q_learning/rl_cost_proxy_summary.csv
+
+# Large local exports
+*.log
+*.tmp

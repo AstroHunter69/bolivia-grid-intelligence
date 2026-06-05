@@ -1,0 +1,15 @@
+category,metric,value,unit,scope
+Forecast,Strict full-day-ahead BDM MAE,35.80610396051495,MW,40-day recursive backtest
+Forecast,CNDC MAE,83.92579476329013,MW,same 40 days
+Forecast,MAE improvement vs CNDC,57.3359965651742,%,40-day recursive backtest
+Forecast,Daily win rate vs CNDC,95.0,%,40-day recursive backtest
+RL,Q-learning test MAE,30.684546255506625,MW,40-day aggregate train/test
+RL,MAE reduction vs no-adjustment,58.067179761452095,%,40-day aggregate test split
+RL,Imbalance cost-proxy saving,189928.22387749996,USD proxy,40-day aggregate test split
+RL,Imbalance cost-proxy saving,58.08981495742219,%,40-day aggregate test split
+Dispatch,Cost-proxy saving,12789409.594649997,USD proxy,40-day technology-level simulation
+Dispatch,Cost-proxy saving,24.676310089376408,%,40-day technology-level simulation
+Renewables,Renewable share increase,27.38715345096278,percentage points,40-day technology-level simulation
+Renewables,Renewable MWh increase,334219.9703249999,MWh,40-day technology-level simulation
+Thermal,Thermal MWh reduction,341915.80109999987,MWh,40-day technology-level simulation
+Reliability,Max unserved energy,0.0,MW,40-day technology-level simulation
