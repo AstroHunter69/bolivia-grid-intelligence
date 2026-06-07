@@ -25,25 +25,35 @@ INDEX = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bolivia AI Energy Lab</title>
   <style>
-    :root { color-scheme: light; --ink:#1f2933; --muted:#5c6b73; --line:#d9e2e7; --blue:#0b7285; --green:#2b8a3e; --bg:#f8fbfc; }
-    body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
-    header { padding:28px 34px 18px; border-bottom:1px solid var(--line); background:white; }
+    :root { color-scheme: light; --ink:#1f2933; --muted:#5c6b73; --line:rgba(111,130,139,0.24); --blue:#087f8c; --blue2:#125f74; --green:#2f9e44; --bg:#eef4f1; --panel:rgba(255,255,255,0.80); --shadow:0 18px 50px rgba(33,54,61,0.12); }
+    body {
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(120deg, rgba(8,127,140,0.10), rgba(47,158,68,0.08) 42%, rgba(230,119,0,0.07)),
+        linear-gradient(rgba(255,255,255,0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.34) 1px, transparent 1px),
+        var(--bg);
+      background-size:auto,44px 44px,44px 44px,auto;
+      color:var(--ink);
+    }
+    header { padding:28px 34px 18px; border-bottom:1px solid var(--line); background:rgba(255,255,255,0.84); backdrop-filter:blur(18px); box-shadow:0 10px 34px rgba(34,55,63,0.08); }
     h1 { margin:0; font-size:30px; letter-spacing:0; }
     header p { margin:8px 0 0; color:var(--muted); max-width:980px; line-height:1.45; }
     main { padding:24px 34px 44px; max-width:1180px; }
     .tabs { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
-    .tab { border:1px solid var(--line); background:#f8fbfc; border-radius:6px; padding:8px 12px; font-weight:700; cursor:pointer; }
-    .tab.active { background:var(--blue); color:white; border-color:var(--blue); }
-    section { display:none; background:white; border:1px solid var(--line); border-radius:8px; padding:18px; }
+    .tab { border:1px solid rgba(18,95,116,0.16); background:rgba(248,252,251,0.84); color:#25313a; border-radius:8px; padding:9px 13px; font-weight:750; cursor:pointer; box-shadow:0 4px 16px rgba(34,55,63,0.06); }
+    .tab.active { background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; border-color:rgba(8,127,140,0.55); }
+    section { display:none; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; box-shadow:var(--shadow); backdrop-filter:blur(14px); }
     section.active { display:block; }
     h2 { font-size:19px; margin:0 0 12px; }
     form { display:grid; grid-template-columns: repeat(5, minmax(130px, 1fr)); gap:12px; align-items:end; }
     label { display:grid; gap:5px; font-size:12px; color:var(--muted); }
-    input, select { height:36px; border:1px solid #b8c4ca; border-radius:6px; padding:0 10px; font-size:14px; background:white; }
-    button { height:38px; border:0; border-radius:6px; padding:0 14px; background:var(--blue); color:white; font-weight:650; cursor:pointer; }
+    input, select { height:36px; border:1px solid rgba(102,120,129,0.34); border-radius:8px; padding:0 10px; font-size:14px; background:rgba(255,255,255,0.88); }
+    button:not(.tab) { height:38px; border:0; border-radius:8px; padding:0 14px; background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; font-weight:700; cursor:pointer; box-shadow:0 8px 20px rgba(8,127,140,0.20); }
     button:disabled { opacity:.62; cursor:wait; }
-    button.secondary { background:var(--green); }
-    pre { white-space:pre-wrap; background:#101820; color:#d9f7ef; padding:16px; border-radius:6px; min-height:160px; overflow:auto; }
+    button.secondary:not(.tab) { background:linear-gradient(135deg,var(--green),#1b7f4a); }
+    pre { white-space:pre-wrap; background:rgba(16,24,32,0.94); color:#d9f7ef; padding:16px; border-radius:8px; min-height:160px; overflow:auto; box-shadow:var(--shadow); }
     .wide { grid-column: span 2; }
     .hint { color:var(--muted); font-size:13px; line-height:1.45; margin-top:8px; }
     .links a { display:inline-block; margin:6px 12px 0 0; color:var(--blue); font-weight:650; text-decoration:none; }

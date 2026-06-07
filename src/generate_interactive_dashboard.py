@@ -197,51 +197,84 @@ HTML_TEMPLATE = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bolivia Grid AI Dashboard</title>
   <style>
-    :root { --bg:#f4f7f9; --ink:#17212b; --muted:#60717d; --line:#d9e3e9; --blue:#0b7285; --green:#2b8a3e; --orange:#e8590c; --red:#c92a2a; }
+    :root {
+      color-scheme: light;
+      --bg:#eef4f1;
+      --ink:#18252d;
+      --muted:#667881;
+      --line:rgba(111,130,139,0.24);
+      --blue:#087f8c;
+      --blue2:#125f74;
+      --green:#2f9e44;
+      --orange:#e67700;
+      --red:#c92a2a;
+      --panel:rgba(255,255,255,0.78);
+      --panelStrong:rgba(255,255,255,0.92);
+      --shadow:0 18px 50px rgba(33,54,61,0.12);
+    }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); }
-    header { background:white; border-bottom:1px solid var(--line); padding:20px 28px 14px; position:sticky; top:0; z-index:5; }
-    h1 { margin:0; font-size:27px; letter-spacing:0; }
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        linear-gradient(120deg, rgba(8,127,140,0.10), rgba(47,158,68,0.08) 42%, rgba(230,119,0,0.07)),
+        linear-gradient(rgba(255,255,255,0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.34) 1px, transparent 1px),
+        #eaf2ef;
+      background-size:auto, 44px 44px, 44px 44px, auto;
+      color:var(--ink);
+    }
+    header {
+      background:rgba(255,255,255,0.82);
+      border-bottom:1px solid var(--line);
+      padding:20px 28px 14px;
+      position:sticky;
+      top:0;
+      z-index:5;
+      backdrop-filter:blur(18px);
+      box-shadow:0 10px 34px rgba(34,55,63,0.08);
+    }
+    h1 { margin:0; font-size:28px; letter-spacing:0; }
     .subtitle { margin-top:6px; color:var(--muted); max-width:1120px; line-height:1.4; }
-    main { padding:18px 28px 34px; max-width:1420px; margin:0 auto; }
+    main { padding:20px 28px 36px; max-width:1420px; margin:0 auto; }
     .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
-    .tab { border:1px solid var(--line); background:#f8fbfc; color:#25313a; border-radius:6px; padding:8px 12px; font-weight:700; cursor:pointer; }
-    .tab.active { background:var(--blue); color:white; border-color:var(--blue); }
+    .tab { border:1px solid rgba(18,95,116,0.16); background:rgba(248,252,251,0.82); color:#25313a; border-radius:8px; padding:9px 13px; font-weight:750; cursor:pointer; box-shadow:0 4px 16px rgba(34,55,63,0.06); }
+    .tab.active { background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; border-color:rgba(8,127,140,0.55); }
     body[data-tab="prediction"] .kpis { display:none; }
     .view { display:none; }
     .view.active { display:block; }
     .kpis { display:grid; grid-template-columns:repeat(5,minmax(160px,1fr)); gap:12px; margin-bottom:16px; }
-    .kpi { background:white; border:1px solid var(--line); border-radius:8px; padding:13px 14px; }
+    .kpi { background:var(--panelStrong); border:1px solid var(--line); border-radius:8px; padding:14px 15px; box-shadow:var(--shadow); backdrop-filter:blur(14px); }
     .kpi .label { color:var(--muted); font-size:12px; line-height:1.25; }
-    .kpi .value { font-size:21px; font-weight:750; margin-top:5px; }
-    .panel { background:white; border:1px solid var(--line); border-radius:8px; padding:16px; }
-    .panel h2 { margin:0 0 10px; font-size:18px; }
+    .kpi .value { font-size:22px; font-weight:800; margin-top:5px; color:#10212a; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; box-shadow:var(--shadow); backdrop-filter:blur(14px); }
+    .panel h2 { margin:0 0 10px; font-size:18px; color:#10212a; }
     .grid2 { display:grid; grid-template-columns:1.15fr 0.85fr; gap:16px; align-items:start; }
     .grid3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
     svg.chart { width:100%; height:372px; display:block; }
-    .mapWrap { position:relative; width:min(720px,100%); aspect-ratio:1280/1352; margin:0 auto; background:#eef4f5; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+    .mapWrap { position:relative; width:min(720px,100%); aspect-ratio:1280/1352; margin:0 auto; background:#eef4f5; border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5); }
     #mapSvg { width:100%; height:100%; display:block; }
     #mixShiftChart { width:100%; height:220px; display:block; margin-bottom:12px; }
     .controls { display:flex; gap:12px; align-items:center; margin:12px 0 0; }
     .datebar { display:flex; flex-wrap:wrap; gap:10px; align-items:end; margin-bottom:14px; }
     .datebar label { display:grid; gap:4px; font-size:12px; color:var(--muted); font-weight:650; }
-    .datebar input { height:34px; border:1px solid #b8c4ca; border-radius:6px; padding:0 9px; background:white; }
-    .datebar button { height:34px; border:0; border-radius:6px; padding:0 12px; background:var(--blue); color:white; font-weight:700; cursor:pointer; }
+    .datebar input { height:36px; border:1px solid rgba(102,120,129,0.34); border-radius:8px; padding:0 10px; background:rgba(255,255,255,0.88); }
+    .datebar button { height:36px; border:0; border-radius:8px; padding:0 13px; background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; font-weight:750; cursor:pointer; box-shadow:0 8px 20px rgba(8,127,140,0.20); }
     button:disabled { opacity:.62; cursor:wait; }
-    input[type=range] { width:100%; }
+    input[type=range] { width:100%; accent-color:var(--blue); }
     .time { min-width:150px; font-weight:750; color:var(--blue); }
-    .legend { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; color:var(--muted); font-size:12px; }
+    .legend { display:flex; flex-wrap:wrap; gap:10px; margin-top:9px; color:var(--muted); font-size:12px; }
     .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; }
     .switches { display:flex; flex-wrap:wrap; gap:12px; margin:6px 0 10px; color:var(--muted); font-size:13px; }
     .switches label { display:flex; gap:6px; align-items:center; }
-    .switches input { height:34px; border:1px solid #b8c4ca; border-radius:6px; padding:0 9px; background:white; }
-    .switches button { height:34px; border:0; border-radius:6px; padding:0 12px; background:var(--blue); color:white; font-weight:700; cursor:pointer; }
+    .switches input { height:36px; border:1px solid rgba(102,120,129,0.34); border-radius:8px; padding:0 10px; background:rgba(255,255,255,0.88); }
+    .switches button { height:36px; border:0; border-radius:8px; padding:0 13px; background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; font-weight:750; cursor:pointer; box-shadow:0 8px 20px rgba(8,127,140,0.20); }
     .metrics { display:grid; grid-template-columns:repeat(3,minmax(130px,1fr)); gap:10px; margin-top:12px; }
-    .metric { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:#fbfdfe; }
+    .metric { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:rgba(251,253,254,0.78); }
     .metric .label { color:var(--muted); font-size:12px; }
     .metric .value { font-size:18px; font-weight:750; margin-top:3px; }
     table { width:100%; border-collapse:collapse; font-size:13px; }
-    th, td { border-bottom:1px solid #edf2f5; padding:7px 6px; text-align:right; }
+    th, td { border-bottom:1px solid rgba(118,139,148,0.18); padding:7px 6px; text-align:right; }
     th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align:left; }
     th { color:var(--muted); font-weight:650; }
     .note { color:var(--muted); font-size:12px; line-height:1.45; margin-top:10px; }
@@ -422,11 +455,11 @@ HTML_TEMPLATE = """<!doctype html>
       const sx = x0 + selected / (intervals.length - 1) * w;
       const d = intervals[selected];
       svg.innerHTML = `
-        <rect x="0" y="0" width="900" height="372" fill="#fff"/>
-        ${[0,1,2,3,4].map(i => `<line x1="${x0}" x2="${x0+w}" y1="${y0+i*h/4}" y2="${y0+i*h/4}" stroke="#e9eef2"/>`).join("")}
+        <rect x="0" y="0" width="900" height="372" rx="8" fill="rgba(255,255,255,0.54)"/>
+        ${[0,1,2,3,4].map(i => `<line x1="${x0}" x2="${x0+w}" y1="${y0+i*h/4}" y2="${y0+i*h/4}" stroke="rgba(83,104,113,0.16)"/>`).join("")}
         ${active.map(s => `<path d="${pathFor(intervals,s.key,x0,y0,w,h,minY,maxY)}" fill="none" stroke="${s.color}" stroke-width="${s.width || 2.7}" stroke-dasharray="${s.dash || ""}"/>`).join("")}
         <line x1="${sx}" x2="${sx}" y1="${y0}" y2="${y0+h}" stroke="#0b7285" stroke-width="1.5" opacity="0.55"/>
-        <rect x="52" y="282" width="815" height="70" rx="5" fill="#ffffff" stroke="#dbe4ea"/>
+        <rect x="52" y="282" width="815" height="70" rx="8" fill="rgba(255,255,255,0.76)" stroke="rgba(91,111,120,0.24)"/>
         <text x="66" y="303" font-size="12" font-weight="700" fill="#17212b">${d.timestamp}</text>
         ${active.map((s,idx) => `<circle cx="${70 + (idx % 3)*265}" cy="${idx < 3 ? 322 : 340}" r="3.2" fill="${s.color}"/><text x="${82 + (idx % 3)*265}" y="${idx < 3 ? 326 : 344}" font-size="12" fill="#17212b">${s.short}: ${d[s.key] == null ? "n/a" : fmt(d[s.key]) + " MW"}</text>`).join("")}
         <text x="5" y="${y0+5}" font-size="11" fill="#5a6b76">${fmt(maxY,0)} MW</text>
@@ -506,12 +539,12 @@ HTML_TEMPLATE = """<!doctype html>
         }).join("");
       }
       svg.innerHTML = `
-        <rect x="0" y="0" width="520" height="220" fill="#fff"/>
+        <rect x="0" y="0" width="520" height="220" rx="8" fill="rgba(255,255,255,0.50)"/>
         <text x="0" y="18" font-size="15" font-weight="750" fill="#17212b">Generation Mix at Selected Time</text>
         <text x="0" y="${y0+22}" font-size="12" font-weight="700" fill="#60717d">Historical</text>
         <text x="0" y="${y0+gap+22}" font-size="12" font-weight="700" fill="#60717d">RL target</text>
-        <rect x="${x0}" y="${y0}" width="${w}" height="${h}" fill="#f1f5f8" stroke="#d9e3e9"/>
-        <rect x="${x0}" y="${y0+gap}" width="${w}" height="${h}" fill="#f1f5f8" stroke="#d9e3e9"/>
+        <rect x="${x0}" y="${y0}" width="${w}" height="${h}" rx="5" fill="rgba(241,245,248,0.72)" stroke="rgba(91,111,120,0.22)"/>
+        <rect x="${x0}" y="${y0+gap}" width="${w}" height="${h}" rx="5" fill="rgba(241,245,248,0.72)" stroke="rgba(91,111,120,0.22)"/>
         ${segments("actual", actualTotal, y0)}
         ${segments("optimized", optTotal, y0 + gap)}
         <text x="${x0+w+10}" y="${y0+22}" font-size="12" fill="#60717d">${fmt(actualTotal)} MW</text>
