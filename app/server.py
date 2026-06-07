@@ -264,7 +264,26 @@ def fetch_actual_demand(date_str: str) -> list[float | None]:
     return [totals[i] if counts[i] else None for i in range(96)]
 
 
-def make_forecast_dashboard(target_date: str) -> Path | None:
+def local_actual_demand(target_date: str) -> list[float | None] | None:
+    compact = target_date.replace("-", "")
+    candidates = [
+        OUTPUTS_ROOT / "data" / f"plant_{compact}" / "demand_15min.csv",
+        OUTPUTS_ROOT / "data" / target_date / "demand_15min.csv",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
+        rows: list[float | None] = []
+        with path.open(newline="") as handle:
+            for row in csv.DictReader(handle):
+                value = row.get("total") or row.get("real_total_demand_mw") or row.get("demand_mw")
+                rows.append(parse_float(value))
+        if rows:
+            return (rows + [None] * 96)[:96]
+    return None
+
+
+def forecast_payload(target_date: str) -> dict | None:
     run_dir = OUTPUTS_ROOT / "runs" / "forecasts" / f"prediction_{target_date}"
     csv_path = run_dir / f"bdm_prediction_{target_date}.csv"
     if not csv_path.exists():
@@ -276,20 +295,41 @@ def make_forecast_dashboard(target_date: str) -> Path | None:
             rows.append(
                 {
                     "timestamp": row["timestamp"][:16],
-                    "model": float(row["predicted_demand_mw"]),
-                    "cndc": float(row["cndc_forecast_total_mw"]),
-                    "actual": None,
+                    "bdm": float(row["predicted_demand_mw"]),
+                    "forecast": float(row["cndc_forecast_total_mw"]),
+                    "demand": None,
                 }
             )
 
     if date.fromisoformat(target_date) <= date.today():
-        try:
-            actual = fetch_actual_demand(target_date)
+        actual = local_actual_demand(target_date)
+        if actual is None:
+            try:
+                actual = fetch_actual_demand(target_date)
+            except Exception:
+                actual = None
+        if actual is not None:
             for row, value in zip(rows, actual):
-                row["actual"] = value
-        except Exception:
-            pass
+                row["demand"] = value
 
+    return {"targetDate": target_date, "rows": rows}
+
+
+def make_forecast_dashboard(target_date: str) -> Path | None:
+    payload_data = forecast_payload(target_date)
+    if payload_data is None:
+        return None
+
+    run_dir = OUTPUTS_ROOT / "runs" / "forecasts" / f"prediction_{target_date}"
+    rows = [
+        {
+            "timestamp": row["timestamp"],
+            "model": row["bdm"],
+            "cndc": row["forecast"],
+            "actual": row["demand"],
+        }
+        for row in payload_data["rows"]
+    ]
     payload = json.dumps({"targetDate": target_date, "rows": rows})
     html = """<!doctype html>
 <html lang="en">
@@ -481,6 +521,19 @@ def run_command(action: str, data: dict) -> tuple[str, list[dict]]:
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == "/api/forecast":
+            params = urllib.parse.parse_qs(parsed.query)
+            target_date = params.get("date", [""])[0]
+            try:
+                data = forecast_payload(target_date)
+                if data is None:
+                    self._send(404, json.dumps({"error": "Forecast output not found"}).encode(), "application/json")
+                    return
+                self._send(200, json.dumps(data).encode(), "application/json")
+            except Exception as exc:
+                self._send(500, json.dumps({"error": str(exc)}).encode(), "application/json")
+            return
         if self.path == "/":
             dashboard = default_dashboard_path()
             if dashboard:

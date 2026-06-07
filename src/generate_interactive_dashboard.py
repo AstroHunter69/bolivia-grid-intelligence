@@ -390,6 +390,9 @@ HTML_TEMPLATE = """<!doctype html>
     const data = JSON.parse(document.getElementById("payload").textContent);
     const intervals = data.intervals;
     const plantsByTime = data.plantsByTime;
+    let predictionRows = intervals.map(d => ({timestamp:d.timestamp, demand:d.demand, forecast:d.forecast, bdm:d.bdm}));
+    let predictionDateLabel = data.report.start.slice(0, 10);
+    let predictionHasBdm = data.hasBdm;
     let selected = Math.floor((intervals.length - 1) / 2);
     let activeTab = "overview";
     const sliders = [...document.querySelectorAll(".timeSlider")];
@@ -398,8 +401,8 @@ HTML_TEMPLATE = """<!doctype html>
     function fmt(n, d=1) { return Number(n).toLocaleString(undefined, {maximumFractionDigits:d}); }
     function money(n) { return "$" + Number(n).toLocaleString(undefined, {maximumFractionDigits:0}); }
     function absErr(a, b) { return a == null || b == null ? null : Math.abs(a - b); }
-    function mae(key) {
-      const errors = intervals.map(d => absErr(d.demand, d[key])).filter(v => v != null && Number.isFinite(v));
+    function mae(key, values=intervals) {
+      const errors = values.map(d => absErr(d.demand, d[key])).filter(v => v != null && Number.isFinite(v));
       return errors.length ? errors.reduce((a,b) => a + b, 0) / errors.length : null;
     }
     function periodLabel() {
@@ -417,6 +420,11 @@ HTML_TEMPLATE = """<!doctype html>
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       return new Date(periodStartDate() + "T00:00:00") >= today;
+    }
+    function isFuturePrediction() {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return new Date(predictionDateLabel + "T00:00:00") > today;
     }
 
     function renderKpis() {
@@ -446,18 +454,25 @@ HTML_TEMPLATE = """<!doctype html>
       }).join(" ");
     }
 
-    function renderLineChart(svgId, legendId, timeId, series) {
+    function renderLineChart(svgId, legendId, timeId, series, values=intervals) {
       const svg = document.getElementById(svgId);
       const active = series.filter(s => s.show !== false);
-      const vals = intervals.flatMap(d => active.map(s => d[s.key]).filter(v => v != null));
+      const vals = values.flatMap(d => active.map(s => d[s.key]).filter(v => v != null));
+      if (!vals.length) {
+        svg.innerHTML = `<rect x="0" y="0" width="900" height="372" rx="8" fill="rgba(255,255,255,0.54)"/><text x="52" y="188" font-size="14" fill="#667881">No data available for this view.</text>`;
+        document.getElementById(legendId).innerHTML = "";
+        document.getElementById(timeId).textContent = "";
+        return;
+      }
       const minY = Math.min(...vals) * 0.94, maxY = Math.max(...vals) * 1.04;
       const x0 = 52, y0 = 24, w = 815, h = 238;
-      const sx = x0 + selected / (intervals.length - 1) * w;
-      const d = intervals[selected];
+      const rowIndex = Math.min(selected, values.length - 1);
+      const sx = x0 + rowIndex / (values.length - 1) * w;
+      const d = values[rowIndex];
       svg.innerHTML = `
         <rect x="0" y="0" width="900" height="372" rx="8" fill="rgba(255,255,255,0.54)"/>
         ${[0,1,2,3,4].map(i => `<line x1="${x0}" x2="${x0+w}" y1="${y0+i*h/4}" y2="${y0+i*h/4}" stroke="rgba(83,104,113,0.16)"/>`).join("")}
-        ${active.map(s => `<path d="${pathFor(intervals,s.key,x0,y0,w,h,minY,maxY)}" fill="none" stroke="${s.color}" stroke-width="${s.width || 2.7}" stroke-dasharray="${s.dash || ""}"/>`).join("")}
+        ${active.map(s => `<path d="${pathFor(values,s.key,x0,y0,w,h,minY,maxY)}" fill="none" stroke="${s.color}" stroke-width="${s.width || 2.7}" stroke-dasharray="${s.dash || ""}"/>`).join("")}
         <line x1="${sx}" x2="${sx}" y1="${y0}" y2="${y0+h}" stroke="#0b7285" stroke-width="1.5" opacity="0.55"/>
         <rect x="52" y="282" width="815" height="70" rx="8" fill="rgba(255,255,255,0.76)" stroke="rgba(91,111,120,0.24)"/>
         <text x="66" y="303" font-size="12" font-weight="700" fill="#17212b">${d.timestamp}</text>
@@ -568,13 +583,13 @@ HTML_TEMPLATE = """<!doctype html>
         {key:"actual_dispatch", short:"Historical", label:"Historical dispatch", color:"#e8590c", dash:"4 4"},
         {key:"optimized_dispatch", short:"RL target", label:"RL-optimized dispatch", color:"#0b7285", width:3}
       ]);
-      const future = isFuturePeriod();
+      const future = isFuturePrediction();
       const predictionSeries = [
         {key:"forecast", short:"CNDC", label:"CNDC forecast", color:"#868e96", dash:"6 5"},
-        {key:"bdm", short:"Bolivia Demand Model", label:"Bolivia Demand Model prediction", color:"#2b8a3e", show:data.hasBdm}
+        {key:"bdm", short:"Bolivia Demand Model", label:"Bolivia Demand Model prediction", color:"#2b8a3e", show:predictionHasBdm}
       ];
       if (!future) predictionSeries.unshift({key:"demand", short:"Actual", label:"Real demand", color:"#17212b", width:3});
-      renderLineChart("predictionChart", "predictionLegend", "predictionTime", predictionSeries);
+      renderLineChart("predictionChart", "predictionLegend", "predictionTime", predictionSeries, predictionRows);
       renderPredictionMetrics(future);
       renderLineChart("dispatchChart", "dispatchLegend", "dispatchTime", [
         {key:"demand", short:"Demand", label:"Real demand", color:"#17212b", width:3},
@@ -588,11 +603,11 @@ HTML_TEMPLATE = """<!doctype html>
     function renderPredictionMetrics(future) {
       const box = document.getElementById("predictionMetrics");
       if (future) {
-        box.innerHTML = `<div class="metric"><div class="label">Forecast date</div><div class="value">${periodLabel()}</div></div><div class="metric"><div class="label">Real demand</div><div class="value">Pending</div></div>`;
+        box.innerHTML = `<div class="metric"><div class="label">Forecast date</div><div class="value">${predictionDateLabel}</div></div><div class="metric"><div class="label">Real demand</div><div class="value">Pending</div></div>`;
         return;
       }
-      const cndc = mae("forecast");
-      const bdm = mae("bdm");
+      const cndc = mae("forecast", predictionRows);
+      const bdm = mae("bdm", predictionRows);
       const rows = [
         ["CNDC MAE", cndc == null ? "n/a" : fmt(cndc, 2) + " MW"],
         ["BDM MAE", bdm == null ? "n/a" : fmt(bdm, 2) + " MW"],
@@ -601,7 +616,7 @@ HTML_TEMPLATE = """<!doctype html>
       box.innerHTML = rows.map(([a,b]) => `<div class="metric"><div class="label">${a}</div><div class="value">${b}</div></div>`).join("");
     }
 
-    async function runLocal(action, payload, button) {
+    async function runLocal(action, payload, button, navigate=true) {
       const oldText = button.textContent;
       button.disabled = true;
       button.textContent = "Running...";
@@ -610,12 +625,27 @@ HTML_TEMPLATE = """<!doctype html>
         const result = await res.json();
         if (result.error) throw new Error(result.error);
         const primary = result.links?.find(item => item.primary) || result.links?.[result.links.length - 1];
-        if (primary) window.location.href = primary.href;
+        if (navigate && primary) window.location.href = primary.href;
+        return result;
       } catch (err) {
         alert(err.message || String(err));
+        throw err;
+      } finally {
         button.disabled = false;
         button.textContent = oldText;
       }
+    }
+
+    async function loadForecastIntoPrediction(date, button) {
+      await runLocal("forecast", {date, lookback_days:"21", chart:"0"}, button, false);
+      const res = await fetch(`/api/forecast?date=${encodeURIComponent(date)}`);
+      const result = await res.json();
+      if (result.error) throw new Error(result.error);
+      predictionRows = result.rows;
+      predictionDateLabel = result.targetDate;
+      predictionHasBdm = predictionRows.some(row => row.bdm != null);
+      selected = Math.min(selected, predictionRows.length - 1);
+      sync();
     }
 
     document.querySelectorAll(".tab").forEach(button => button.addEventListener("click", () => {
@@ -631,7 +661,7 @@ HTML_TEMPLATE = """<!doctype html>
     });
     document.getElementById("runPredictionDate").addEventListener("click", event => {
       const date = document.getElementById("predictionDate").value;
-      runLocal("forecast", {date, lookback_days:"21", chart:"0"}, event.currentTarget);
+      loadForecastIntoPrediction(date, event.currentTarget).catch(err => alert(err.message || String(err)));
     });
     document.body.dataset.tab = activeTab;
     renderKpis();
