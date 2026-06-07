@@ -195,7 +195,7 @@ HTML_TEMPLATE = """<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bolivia Grid AI Dashboard</title>
+  <title>Bolivia Grid Intelligence</title>
   <style>
     :root {
       color-scheme: light;
@@ -285,7 +285,7 @@ HTML_TEMPLATE = """<!doctype html>
 </head>
 <body>
   <header>
-    <h1>Bolivia Grid AI Dashboard</h1>
+    <h1>Bolivia Grid Intelligence</h1>
     <div class="subtitle">One-day or range-based research dashboard for Bolivia Demand Model forecasting, CNDC comparison, and an RL-oriented dispatch optimization simulation.</div>
     <nav class="tabs">
       <button class="tab active" data-tab="overview">Overview</button>
@@ -637,8 +637,11 @@ HTML_TEMPLATE = """<!doctype html>
     }
 
     async function loadForecastIntoPrediction(date, button) {
-      await runLocal("forecast", {date, lookback_days:"21", chart:"0"}, button, false);
-      const res = await fetch(`/api/forecast?date=${encodeURIComponent(date)}`);
+      let res = await fetch(`/api/forecast?date=${encodeURIComponent(date)}`);
+      if (res.status === 404) {
+        await runLocal("forecast", {date, lookback_days:"21", chart:"0"}, button, false);
+        res = await fetch(`/api/forecast?date=${encodeURIComponent(date)}`);
+      }
       const result = await res.json();
       if (result.error) throw new Error(result.error);
       predictionRows = result.rows;

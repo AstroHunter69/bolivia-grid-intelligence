@@ -1,0 +1,2 @@
+date,intervals,demand_mwh,actual_dispatch_mwh,optimized_dispatch_mwh,actual_cost_proxy_usd,optimized_cost_proxy_usd,actual_renewable_mwh,optimized_renewable_mwh,unserved_mw_max,cost_proxy_saving_usd,cost_proxy_saving_pct,actual_renewable_share,optimized_renewable_share
+2026-06-06,94,28803.157500000005,32221.785,29667.252225000004,1432767.265,930623.5473750002,7969.0975,15890.226500000002,0.0,502143.7176249997,35.047123834518914,0.2473201748444414,0.5356150404320096

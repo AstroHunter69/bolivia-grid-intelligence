@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolivia Demand Model Forecast</title>
+  <style>
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#f4f7f9; color:#17212b; }
+    header { background:white; border-bottom:1px solid #d9e3e9; padding:22px 28px 16px; }
+    h1 { margin:0; font-size:27px; }
+    main { max-width:1180px; margin:0 auto; padding:20px 28px 34px; }
+    .panel,.metric { background:white; border:1px solid #d9e3e9; border-radius:8px; padding:16px; }
+    .metrics { display:grid; grid-template-columns:repeat(4,minmax(140px,1fr)); gap:12px; margin-bottom:16px; }
+    .label { color:#60717d; font-size:12px; }
+    .value { font-size:22px; font-weight:750; margin-top:4px; }
+    svg { width:100%; height:390px; display:block; }
+    .legend { display:flex; gap:14px; flex-wrap:wrap; color:#60717d; font-size:13px; margin-top:10px; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; }
+    .controls { display:flex; gap:12px; align-items:center; margin-top:12px; }
+    input[type=range] { width:100%; }
+    .time { flex:0 0 170px; min-width:170px; color:#0b7285; font-weight:750; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .datebar { display:flex; flex-wrap:wrap; gap:10px; align-items:end; margin-bottom:16px; }
+    .datebar label { display:grid; gap:4px; color:#60717d; font-size:12px; font-weight:650; }
+    .datebar input { height:34px; border:1px solid #b8c4ca; border-radius:6px; padding:0 9px; background:white; }
+    .datebar button { height:34px; border:0; border-radius:6px; padding:0 12px; background:#0b7285; color:white; font-weight:700; cursor:pointer; }
+    button:disabled { opacity:.62; cursor:wait; }
+    @media (max-width:900px) { .metrics { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <header><h1>Bolivia Demand Forecast</h1></header>
+  <main>
+    <div class="datebar">
+      <label>Forecast Date<input id="forecastDate" type="date"></label>
+      <button id="runForecast" type="button">Run Forecast</button>
+    </div>
+    <div class="metrics" id="metrics"></div>
+    <section class="panel">
+      <svg id="chart" viewBox="0 0 900 390" preserveAspectRatio="none"></svg>
+      <div class="controls"><input id="slider" type="range" min="0" max="0" value="0"><div class="time" id="timeLabel"></div></div>
+      <div class="legend" id="legend"></div>
+    </section>
+  </main>
+  <script id="payload" type="application/json">{"targetDate": "2026-06-05", "rows": [{"timestamp": "2026-06-05 00:00", "model": 1043.2904052734375, "cndc": 959.03, "actual": 1061.6299999999999}, {"timestamp": "2026-06-05 00:15", "model": 1019.5634155273438, "cndc": 947.3575000000001, "actual": 1024.61}, {"timestamp": "2026-06-05 00:30", "model": 1007.6116943359375, "cndc": 935.6850000000001, "actual": 1005.87}, {"timestamp": "2026-06-05 00:45", "model": 985.207763671875, "cndc": 924.0125, "actual": 983.77}, {"timestamp": "2026-06-05 01:00", "model": 986.832763671875, "cndc": 912.34, "actual": 970.4000000000001}, {"timestamp": "2026-06-05 01:15", "model": 975.9652709960938, "cndc": 904.675, "actual": 961.6999999999999}, {"timestamp": "2026-06-05 01:30", "model": 969.0278930664062, "cndc": 897.0100000000001, "actual": 953.9599999999999}, {"timestamp": "2026-06-05 01:45", "model": 967.5308837890625, "cndc": 889.345, "actual": 934.13}, {"timestamp": "2026-06-05 02:00", "model": 966.5352783203125, "cndc": 881.68, "actual": 920.7399999999999}, {"timestamp": "2026-06-05 02:15", "model": 957.21337890625, "cndc": 878.0649999999999, "actual": 909.4}, {"timestamp": "2026-06-05 02:30", "model": 955.4024658203125, "cndc": 874.4499999999999, "actual": 906.1899999999999}, {"timestamp": "2026-06-05 02:45", "model": 961.9813232421875, "cndc": 870.835, "actual": 903.2699999999999}, {"timestamp": "2026-06-05 03:00", "model": 939.661376953125, "cndc": 867.2199999999999, "actual": 893.2800000000001}, {"timestamp": "2026-06-05 03:15", "model": 940.7321166992188, "cndc": 866.045, "actual": 886.87}, {"timestamp": "2026-06-05 03:30", "model": 937.4530639648438, "cndc": 864.87, "actual": 891.13}, {"timestamp": "2026-06-05 03:45", "model": 943.3057250976562, "cndc": 863.695, "actual": 884.81}, {"timestamp": "2026-06-05 04:00", "model": 939.5552368164062, "cndc": 862.5200000000001, "actual": 894.3000000000001}, {"timestamp": "2026-06-05 04:15", "model": 938.1161499023438, "cndc": 866.705, "actual": 888.8599999999999}, {"timestamp": "2026-06-05 04:30", "model": 944.4954223632812, "cndc": 870.89, "actual": 888.1399999999999}, {"timestamp": "2026-06-05 04:45", "model": 950.012451171875, "cndc": 875.0750000000002, "actual": 892.3399999999999}, {"timestamp": "2026-06-05 05:00", "model": 940.9878540039062, "cndc": 879.2600000000001, "actual": 910.8799999999999}, {"timestamp": "2026-06-05 05:15", "model": 941.2277221679688, "cndc": 868.035, "actual": 910.25}, {"timestamp": "2026-06-05 05:30", "model": 945.5654296875, "cndc": 856.8100000000001, "actual": 913.1999999999999}, {"timestamp": "2026-06-05 05:45", "model": 941.0740356445312, "cndc": 845.5849999999999, "actual": 920.0799999999999}, {"timestamp": "2026-06-05 06:00", "model": 958.851318359375, "cndc": 834.3599999999999, "actual": 935.66}, {"timestamp": "2026-06-05 06:15", "model": 940.1793212890625, "cndc": 844.2375000000001, "actual": 925.23}, {"timestamp": "2026-06-05 06:30", "model": 933.9708251953125, "cndc": 854.115, "actual": 884.57}, {"timestamp": "2026-06-05 06:45", "model": 935.1838989257812, "cndc": 863.9925, "actual": 870.85}, {"timestamp": "2026-06-05 07:00", "model": 926.3495483398438, "cndc": 873.8699999999999, "actual": 887.36}, {"timestamp": "2026-06-05 07:15", "model": 934.6923217773438, "cndc": 890.1875000000001, "actual": 915.0199999999999}, {"timestamp": "2026-06-05 07:30", "model": 954.2467651367188, "cndc": 906.505, "actual": 935.0000000000001}, {"timestamp": "2026-06-05 07:45", "model": 969.3505859375, "cndc": 922.8225, "actual": 970.9399999999999}, {"timestamp": "2026-06-05 08:00", "model": 967.9376831054688, "cndc": 939.1400000000001, "actual": 972.8900000000001}, {"timestamp": "2026-06-05 08:15", "model": 984.84521484375, "cndc": 948.8275, "actual": 1000.63}, {"timestamp": "2026-06-05 08:30", "model": 992.8888549804688, "cndc": 958.515, "actual": 1035.82}, {"timestamp": "2026-06-05 08:45", "model": 1011.36181640625, "cndc": 968.2025, "actual": 1060.35}, {"timestamp": "2026-06-05 09:00", "model": 1013.355712890625, "cndc": 977.8900000000001, "actual": 1091.9199999999998}, {"timestamp": "2026-06-05 09:15", "model": 1023.76123046875, "cndc": 984.4074999999999, "actual": 1108.33}, {"timestamp": "2026-06-05 09:30", "model": 1039.0377197265625, "cndc": 990.925, "actual": 1130.0800000000002}, {"timestamp": "2026-06-05 09:45", "model": 1044.0260009765625, "cndc": 997.4425, "actual": 1150.3000000000002}, {"timestamp": "2026-06-05 10:00", "model": 1054.1370849609375, "cndc": 1003.96, "actual": 1160.17}, {"timestamp": "2026-06-05 10:15", "model": 1058.735595703125, "cndc": 1007.2449999999999, "actual": 1176.9299999999998}, {"timestamp": "2026-06-05 10:30", "model": 1067.13916015625, "cndc": 1010.5300000000001, "actual": 1194.37}, {"timestamp": "2026-06-05 10:45", "model": 1082.7154541015625, "cndc": 1013.815, "actual": 1212.61}, {"timestamp": "2026-06-05 11:00", "model": 1093.467529296875, "cndc": 1017.0999999999999, "actual": 1228.9699999999998}, {"timestamp": "2026-06-05 11:15", "model": 1094.5721435546875, "cndc": 1013.8775, "actual": 1238.07}, {"timestamp": "2026-06-05 11:30", "model": 1095.34765625, "cndc": 1010.6550000000001, "actual": 1241.59}, {"timestamp": "2026-06-05 11:45", "model": 1088.754150390625, "cndc": 1007.4325, "actual": 1232.9399999999998}, {"timestamp": "2026-06-05 12:00", "model": 1080.0162353515625, "cndc": 1004.21, "actual": 1236.71}, {"timestamp": "2026-06-05 12:15", "model": 1078.1265869140625, "cndc": 1005.3625000000001, "actual": 1236.96}, {"timestamp": "2026-06-05 12:30", "model": 1077.04150390625, "cndc": 1006.515, "actual": 1233.4099999999999}, {"timestamp": "2026-06-05 12:45", "model": 1088.584228515625, "cndc": 1007.6674999999999, "actual": 1233.13}, {"timestamp": "2026-06-05 13:00", "model": 1087.36669921875, "cndc": 1008.8199999999999, "actual": 1241.88}, {"timestamp": "2026-06-05 13:15", "model": 1098.6788330078125, "cndc": 1013.225, "actual": 1250.5299999999997}, {"timestamp": "2026-06-05 13:30", "model": 1109.998046875, "cndc": 1017.63, "actual": 1256.08}, {"timestamp": "2026-06-05 13:45", "model": 1108.6630859375, "cndc": 1022.035, "actual": 1253.55}, {"timestamp": "2026-06-05 14:00", "model": 1102.8128662109375, "cndc": 1026.44, "actual": 1261.73}, {"timestamp": "2026-06-05 14:15", "model": 1106.0323486328125, "cndc": 1030.085, "actual": 1298.19}, {"timestamp": "2026-06-05 14:30", "model": 1099.029296875, "cndc": 1033.73, "actual": 1338.4499999999998}, {"timestamp": "2026-06-05 14:45", "model": 1092.528076171875, "cndc": 1037.375, "actual": 1367.87}, {"timestamp": "2026-06-05 15:00", "model": 1111.7449951171875, "cndc": 1041.02, "actual": 1368.69}, {"timestamp": "2026-06-05 15:15", "model": 1113.0574951171875, "cndc": 1044.5175, "actual": 1381.75}, {"timestamp": "2026-06-05 15:30", "model": 1113.4365234375, "cndc": 1048.0149999999999, "actual": 1374.47}, {"timestamp": "2026-06-05 15:45", "model": 1116.42333984375, "cndc": 1051.5125, "actual": 1368.28}, {"timestamp": "2026-06-05 16:00", "model": 1132.2025146484375, "cndc": 1055.01, "actual": 1359.1000000000001}, {"timestamp": "2026-06-05 16:15", "model": 1148.0030517578125, "cndc": 1084.71, "actual": 1341.5799999999997}, {"timestamp": "2026-06-05 16:30", "model": 1191.7039794921875, "cndc": 1114.41, "actual": 1330.31}, {"timestamp": "2026-06-05 16:45", "model": 1204.8292236328125, "cndc": 1144.11, "actual": 1302.72}, {"timestamp": "2026-06-05 17:00", "model": 1209.095703125, "cndc": 1173.81, "actual": 1295.76}, {"timestamp": "2026-06-05 17:15", "model": 1212.8709716796875, "cndc": 1207.3625000000002, "actual": 1290.1200000000001}, {"timestamp": "2026-06-05 17:30", "model": 1245.44580078125, "cndc": 1240.9150000000002, "actual": 1291.7}, {"timestamp": "2026-06-05 17:45", "model": 1327.177001953125, "cndc": 1274.4675000000002, "actual": 1333.37}, {"timestamp": "2026-06-05 18:00", "model": 1315.8216552734375, "cndc": 1308.02, "actual": 1405.1299999999999}, {"timestamp": "2026-06-05 18:15", "model": 1350.100830078125, "cndc": 1305.775, "actual": 1440.41}, {"timestamp": "2026-06-05 18:30", "model": 1346.1168212890625, "cndc": 1303.5299999999997, "actual": 1472.0400000000002}, {"timestamp": "2026-06-05 18:45", "model": 1352.3572998046875, "cndc": 1301.2849999999999, "actual": 1467.6299999999999}, {"timestamp": "2026-06-05 19:00", "model": 1360.3519287109375, "cndc": 1299.04, "actual": 1479.83}, {"timestamp": "2026-06-05 19:15", "model": 1345.27197265625, "cndc": 1289.5625, "actual": 1474.2600000000002}, {"timestamp": "2026-06-05 19:30", "model": 1319.389404296875, "cndc": 1280.085, "actual": 1464.94}, {"timestamp": "2026-06-05 19:45", "model": 1308.8704833984375, "cndc": 1270.6075, "actual": 1456.94}, {"timestamp": "2026-06-05 20:00", "model": 1315.7366943359375, "cndc": 1261.13, "actual": 1445.72}, {"timestamp": "2026-06-05 20:15", "model": 1269.1041259765625, "cndc": 1240.1825000000001, "actual": 1424.3000000000002}, {"timestamp": "2026-06-05 20:30", "model": 1250.342529296875, "cndc": 1219.2350000000001, "actual": 1439.83}, {"timestamp": "2026-06-05 20:45", "model": 1229.1451416015625, "cndc": 1198.2875, "actual": 1410.2800000000002}, {"timestamp": "2026-06-05 21:00", "model": 1253.2904052734375, "cndc": 1177.3400000000001, "actual": 1396.49}, {"timestamp": "2026-06-05 21:15", "model": 1237.5172119140625, "cndc": 1148.3075000000001, "actual": 1369.68}, {"timestamp": "2026-06-05 21:30", "model": 1195.155029296875, "cndc": 1119.2749999999999, "actual": 1349.0400000000002}, {"timestamp": "2026-06-05 21:45", "model": 1139.9110107421875, "cndc": 1090.2424999999998, "actual": 1334.5199999999995}, {"timestamp": "2026-06-05 22:00", "model": 1143.1971435546875, "cndc": 1061.21, "actual": 1322.7699999999998}, {"timestamp": "2026-06-05 22:15", "model": 1114.0040283203125, "cndc": 1035.7175, "actual": 1288.6300000000003}, {"timestamp": "2026-06-05 22:30", "model": 1099.2515869140625, "cndc": 1010.225, "actual": 1271.5000000000002}, {"timestamp": "2026-06-05 22:45", "model": 1047.732666015625, "cndc": 984.7325000000001, "actual": 1212.1299999999999}, {"timestamp": "2026-06-05 23:00", "model": 1053.531005859375, "cndc": 959.24, "actual": 1188.29}, {"timestamp": "2026-06-05 23:15", "model": 1035.3621826171875, "cndc": 959.24, "actual": 1168.7499999999998}, {"timestamp": "2026-06-05 23:30", "model": 978.4509887695312, "cndc": 959.24, "actual": null}, {"timestamp": "2026-06-05 23:45", "model": 972.6356811523438, "cndc": 959.24, "actual": null}]}</script>
+  <script>
+    const data = JSON.parse(document.getElementById("payload").textContent);
+    const rows = data.rows;
+    const hasActual = rows.some(r => r.actual != null);
+    const slider = document.getElementById("slider");
+    let selected = Math.floor((rows.length - 1) / 2);
+    slider.max = rows.length - 1;
+    slider.value = selected;
+    function tomorrowIso(){const d=new Date(); d.setDate(d.getDate()+1); return d.toISOString().slice(0,10);}
+    function fmt(n,d=1){return Number(n).toLocaleString(undefined,{maximumFractionDigits:d});}
+    function mae(key){const e=rows.filter(r=>r.actual!=null&&r[key]!=null).map(r=>Math.abs(r.actual-r[key])); return e.length?e.reduce((a,b)=>a+b,0)/e.length:null;}
+    function path(key,x0,y0,w,h,minY,maxY){return rows.map((r,i)=>{if(r[key]==null)return ""; const x=x0+i/(rows.length-1)*w; const y=y0+h-(r[key]-minY)/(maxY-minY)*h; return `${i?"L":"M"}${x.toFixed(1)},${y.toFixed(1)}`}).join(" ");}
+    function draw(){
+      const series=[["cndc","#868e96","CNDC forecast","6 5"],["model","#2b8a3e","Bolivia Demand Model forecast",""]];
+      if(hasActual) series.unshift(["actual","#17212b","Real demand",""]);
+      const vals=rows.flatMap(r=>series.map(s=>r[s[0]]).filter(v=>v!=null));
+      const minY=Math.min(...vals)*0.94, maxY=Math.max(...vals)*1.04;
+      const x0=54,y0=26,w=810,h=280;
+      const sx=x0+selected/(rows.length-1)*w;
+      const point=rows[selected];
+      document.getElementById("chart").innerHTML=`
+        <rect x="0" y="0" width="900" height="390" fill="#fff"/>
+        ${[0,1,2,3,4].map(i=>`<line x1="${x0}" x2="${x0+w}" y1="${y0+i*h/4}" y2="${y0+i*h/4}" stroke="#e9eef2"/>`).join("")}
+        ${series.map(s=>`<path d="${path(s[0],x0,y0,w,h,minY,maxY)}" fill="none" stroke="${s[1]}" stroke-width="3" stroke-dasharray="${s[3]}"/>`).join("")}
+        <line x1="${sx}" x2="${sx}" y1="${y0}" y2="${y0+h}" stroke="#0b7285" stroke-width="1.5" opacity="0.55"/>
+        <rect x="54" y="322" width="810" height="48" rx="5" fill="#fff" stroke="#d9e3e9"/>
+        ${series.map((s,i)=>`<circle cx="${74+i*250}" cy="350" r="3.2" fill="${s[1]}"/><text x="${86+i*250}" y="354" font-size="12" fill="#17212b">${s[2].replace(" forecast","")}: ${point[s[0]]==null?"n/a":fmt(point[s[0]])+" MW"}</text>`).join("")}
+        <text x="8" y="${y0+4}" font-size="11" fill="#60717d">${fmt(maxY,0)} MW</text>
+        <text x="8" y="${y0+h}" font-size="11" fill="#60717d">${fmt(minY,0)} MW</text>
+      `;
+      document.getElementById("timeLabel").textContent = point.timestamp;
+      document.getElementById("legend").innerHTML=series.map(s=>`<span><span class="dot" style="background:${s[1]}"></span>${s[2]}</span>`).join("");
+    }
+    const cndcMae=mae("cndc"), modelMae=mae("model");
+    const avg=rows.reduce((a,r)=>a+r.model,0)/rows.length;
+    const peak=rows.reduce((a,r)=>r.model>a.model?r:a,rows[0]);
+    const metrics=[
+      ["Forecast date", data.targetDate],
+      ["Average BDM", fmt(avg)+" MW"],
+      ["Peak BDM", fmt(peak.model)+" MW"],
+      [hasActual?"BDM MAE":"Real demand", hasActual?fmt(modelMae,2)+" MW":"Pending"]
+    ];
+    if(hasActual) metrics.push(["CNDC MAE", fmt(cndcMae,2)+" MW"]);
+    document.getElementById("metrics").innerHTML=metrics.map(m=>`<div class="metric"><div class="label">${m[0]}</div><div class="value">${m[1]}</div></div>`).join("");
+    slider.addEventListener("input", () => { selected = Number(slider.value); draw(); });
+    document.getElementById("forecastDate").value=data.targetDate;
+    document.getElementById("forecastDate").max=tomorrowIso();
+    document.getElementById("runForecast").addEventListener("click", async event => {
+      const button=event.currentTarget;
+      const old=button.textContent;
+      button.disabled=true;
+      button.textContent="Running...";
+      try {
+        const date=document.getElementById("forecastDate").value;
+        const res=await fetch("/run/forecast",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({date,lookback_days:"21",chart:"0"})});
+        const result=await res.json();
+        if(result.error) throw new Error(result.error);
+        const primary=result.links?.find(item=>item.primary)||result.links?.[0];
+        if(primary) window.location.href=primary.href;
+      } catch(err) {
+        alert(err.message||String(err));
+        button.disabled=false;
+        button.textContent=old;
+      }
+    });
+    draw();
+  </script>
+</body>
+</html>

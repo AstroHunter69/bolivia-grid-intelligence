@@ -1,0 +1,23 @@
+{
+  "rows": 94,
+  "start": "2026-06-06 00:00:00",
+  "end": "2026-06-06 23:15:00",
+  "reserve_margin": 0.03,
+  "capacity_margin": 1.1,
+  "actual_cost_proxy_usd": 1432767.2650000001,
+  "optimized_cost_proxy_usd": 930623.5473750002,
+  "cost_proxy_saving_usd": 502143.71762499993,
+  "cost_proxy_saving_pct": 35.04712383451892,
+  "actual_renewable_share": 0.2473201748444414,
+  "optimized_renewable_share": 0.5356150404320096,
+  "unserved_mw_max": 0.0,
+  "cost_assumptions_usd_mwh": {
+    "EOL": 5.0,
+    "SOL": 5.0,
+    "BIO": 12.0,
+    "HID": 18.0,
+    "INT": 35.0,
+    "TER": 55.0
+  },
+  "note": "Cost values are technology-level assumptions for a dispatch-cost proxy, not audited plant marginal costs."
+}

@@ -1,0 +1,22 @@
+{
+  "start_date": "2026-06-06",
+  "end_date": "2026-06-06",
+  "outputs": [
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/generation_15min_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/generation_15min.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/demand_15min_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/demand_15min.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/marginal_cost_forecast_hourly_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/marginal_cost_forecast_hourly.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/demand_forecast_hourly_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/demand_forecast_hourly.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/injected_energy_hourly_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/injected_energy_hourly.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/plant_dispatch_15min_long.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/plant_dispatch_by_type_15min.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/effective_capacity_static.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/capacity_detail_static.csv",
+    "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/data/plant_20260606/transmission_lines_static.csv"
+  ],
+  "notes": []
+}

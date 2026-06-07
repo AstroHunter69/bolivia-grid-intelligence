@@ -1,0 +1,571 @@
+{
+  "snapshot_time": "2026-06-01 19:00",
+  "current_demand_mw": 1522.05,
+  "current_generation_mw": 1584.47,
+  "forecast": [
+    {
+      "timestamp": "2026-06-01 19:15",
+      "forecast_mw": 1389.2696533203125
+    },
+    {
+      "timestamp": "2026-06-01 19:30",
+      "forecast_mw": 1379.7520751953125
+    },
+    {
+      "timestamp": "2026-06-01 19:45",
+      "forecast_mw": 1367.5771484375
+    },
+    {
+      "timestamp": "2026-06-01 20:00",
+      "forecast_mw": 1368.168212890625
+    }
+  ],
+  "forecast_source": "v41",
+  "curve": [
+    {
+      "timestamp": "2026-06-01 00:00",
+      "actual_mw": 1000.67,
+      "forecast_mw": 929.858,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 00:15",
+      "actual_mw": 967.41,
+      "forecast_mw": 914.183,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 00:30",
+      "actual_mw": 949.7,
+      "forecast_mw": 906.595,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 00:45",
+      "actual_mw": 931.77,
+      "forecast_mw": 900.456,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 01:00",
+      "actual_mw": 919.97,
+      "forecast_mw": 902.675,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 01:15",
+      "actual_mw": 920.03,
+      "forecast_mw": 899.072,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 01:30",
+      "actual_mw": 908.82,
+      "forecast_mw": 887.968,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 01:45",
+      "actual_mw": 899.07,
+      "forecast_mw": 882.497,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 02:00",
+      "actual_mw": 887.83,
+      "forecast_mw": 882.339,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 02:15",
+      "actual_mw": 884.66,
+      "forecast_mw": 878.205,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 02:30",
+      "actual_mw": 880.58,
+      "forecast_mw": 880.261,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 02:45",
+      "actual_mw": 868.69,
+      "forecast_mw": 878.651,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 03:00",
+      "actual_mw": 874.07,
+      "forecast_mw": 875.135,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 03:15",
+      "actual_mw": 872.12,
+      "forecast_mw": 876.286,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 03:30",
+      "actual_mw": 864.83,
+      "forecast_mw": 877.497,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 03:45",
+      "actual_mw": 869.52,
+      "forecast_mw": 878.101,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 04:00",
+      "actual_mw": 871.84,
+      "forecast_mw": 869.042,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 04:15",
+      "actual_mw": 876.31,
+      "forecast_mw": 873.533,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 04:30",
+      "actual_mw": 880.1,
+      "forecast_mw": 879.535,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 04:45",
+      "actual_mw": 872.57,
+      "forecast_mw": 916.91,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 05:00",
+      "actual_mw": 886.86,
+      "forecast_mw": 914.233,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 05:15",
+      "actual_mw": 904.78,
+      "forecast_mw": 932.366,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 05:30",
+      "actual_mw": 927.28,
+      "forecast_mw": 947.709,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 05:45",
+      "actual_mw": 951.38,
+      "forecast_mw": 987.684,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 06:00",
+      "actual_mw": 979.2,
+      "forecast_mw": 981.268,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 06:15",
+      "actual_mw": 1019.52,
+      "forecast_mw": 995.833,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 06:30",
+      "actual_mw": 1030.03,
+      "forecast_mw": 1032.068,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 06:45",
+      "actual_mw": 1045.26,
+      "forecast_mw": 1048.566,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 07:00",
+      "actual_mw": 1076.9,
+      "forecast_mw": 1035.561,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 07:15",
+      "actual_mw": 1102.76,
+      "forecast_mw": 1075.596,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 07:30",
+      "actual_mw": 1114.62,
+      "forecast_mw": 1125.782,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 07:45",
+      "actual_mw": 1113.39,
+      "forecast_mw": 1160.145,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 08:00",
+      "actual_mw": 1147.37,
+      "forecast_mw": 1125.213,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 08:15",
+      "actual_mw": 1168.51,
+      "forecast_mw": 1150.592,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 08:30",
+      "actual_mw": 1196.8,
+      "forecast_mw": 1170.944,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 08:45",
+      "actual_mw": 1217.8,
+      "forecast_mw": 1187.416,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 09:00",
+      "actual_mw": 1243.04,
+      "forecast_mw": 1170.63,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 09:15",
+      "actual_mw": 1246.75,
+      "forecast_mw": 1199.92,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 09:30",
+      "actual_mw": 1274.0,
+      "forecast_mw": 1215.646,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 09:45",
+      "actual_mw": 1287.58,
+      "forecast_mw": 1221.446,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 10:00",
+      "actual_mw": 1304.21,
+      "forecast_mw": 1207.49,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 10:15",
+      "actual_mw": 1307.09,
+      "forecast_mw": 1227.203,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 10:30",
+      "actual_mw": 1327.08,
+      "forecast_mw": 1232.806,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 10:45",
+      "actual_mw": 1336.29,
+      "forecast_mw": 1236.293,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 11:00",
+      "actual_mw": 1340.13,
+      "forecast_mw": 1230.396,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 11:15",
+      "actual_mw": 1350.56,
+      "forecast_mw": 1234.42,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 11:30",
+      "actual_mw": 1366.7,
+      "forecast_mw": 1235.135,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 11:45",
+      "actual_mw": 1343.46,
+      "forecast_mw": 1216.669,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 12:00",
+      "actual_mw": 1328.34,
+      "forecast_mw": 1212.578,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 12:15",
+      "actual_mw": 1318.58,
+      "forecast_mw": 1214.027,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 12:30",
+      "actual_mw": 1305.44,
+      "forecast_mw": 1214.595,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 12:45",
+      "actual_mw": 1321.58,
+      "forecast_mw": 1220.092,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 13:00",
+      "actual_mw": 1332.05,
+      "forecast_mw": 1208.096,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 13:15",
+      "actual_mw": 1325.67,
+      "forecast_mw": 1229.84,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 13:30",
+      "actual_mw": 1342.31,
+      "forecast_mw": 1238.109,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 13:45",
+      "actual_mw": 1344.58,
+      "forecast_mw": 1244.865,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 14:00",
+      "actual_mw": 1369.53,
+      "forecast_mw": 1237.73,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 14:15",
+      "actual_mw": 1385.41,
+      "forecast_mw": 1241.255,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 14:30",
+      "actual_mw": 1395.7,
+      "forecast_mw": 1241.006,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 14:45",
+      "actual_mw": 1404.24,
+      "forecast_mw": 1242.741,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 15:00",
+      "actual_mw": 1402.89,
+      "forecast_mw": 1244.347,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 15:15",
+      "actual_mw": 1409.65,
+      "forecast_mw": 1241.721,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 15:30",
+      "actual_mw": 1398.59,
+      "forecast_mw": 1238.607,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 15:45",
+      "actual_mw": 1403.84,
+      "forecast_mw": 1242.008,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 16:00",
+      "actual_mw": 1394.35,
+      "forecast_mw": 1241.463,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 16:15",
+      "actual_mw": 1390.12,
+      "forecast_mw": 1235.763,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 16:30",
+      "actual_mw": 1366.58,
+      "forecast_mw": 1244.684,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 16:45",
+      "actual_mw": 1363.18,
+      "forecast_mw": 1254.36,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 17:00",
+      "actual_mw": 1346.77,
+      "forecast_mw": 1222.977,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 17:15",
+      "actual_mw": 1352.51,
+      "forecast_mw": 1288.361,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 17:30",
+      "actual_mw": 1360.59,
+      "forecast_mw": 1316.026,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 17:45",
+      "actual_mw": 1409.49,
+      "forecast_mw": 1363.69,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 18:00",
+      "actual_mw": 1472.36,
+      "forecast_mw": 1360.359,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 18:15",
+      "actual_mw": 1519.81,
+      "forecast_mw": 1394.495,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 18:30",
+      "actual_mw": 1531.91,
+      "forecast_mw": 1389.198,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 18:45",
+      "actual_mw": 1529.14,
+      "forecast_mw": 1388.681,
+      "rl_target_mw": null
+    },
+    {
+      "timestamp": "2026-06-01 19:00",
+      "actual_mw": 1522.05,
+      "forecast_mw": 1396.462,
+      "rl_target_mw": 1445.947
+    },
+    {
+      "timestamp": "2026-06-01 19:15",
+      "actual_mw": null,
+      "forecast_mw": 1389.27,
+      "rl_target_mw": 1319.806
+    },
+    {
+      "timestamp": "2026-06-01 19:30",
+      "actual_mw": null,
+      "forecast_mw": 1379.752,
+      "rl_target_mw": 1310.764
+    },
+    {
+      "timestamp": "2026-06-01 19:45",
+      "actual_mw": null,
+      "forecast_mw": 1367.577,
+      "rl_target_mw": 1299.198
+    },
+    {
+      "timestamp": "2026-06-01 20:00",
+      "actual_mw": null,
+      "forecast_mw": 1368.168,
+      "rl_target_mw": 1299.76
+    }
+  ],
+  "default_curve_index": 76,
+  "forecast_peak_mw": 1389.27,
+  "action": -0.05,
+  "reason": "Demand forecast is easing and generation is above demand; reduce reserve target.",
+  "confidence": "low",
+  "target_mw": 1445.947,
+  "dispatch": [
+    {
+      "type": "EOL",
+      "label": "Wind",
+      "current_mw": 15.33,
+      "recommended_mw": 15.33,
+      "delta_mw": 0.0,
+      "cost_usd_mwh": 5.0
+    },
+    {
+      "type": "SOL",
+      "label": "Solar",
+      "current_mw": 0.0,
+      "recommended_mw": 0.0,
+      "delta_mw": 0.0,
+      "cost_usd_mwh": 5.0
+    },
+    {
+      "type": "BIO",
+      "label": "Biomass",
+      "current_mw": 0.0,
+      "recommended_mw": 0.0,
+      "delta_mw": 0.0,
+      "cost_usd_mwh": 12.0
+    },
+    {
+      "type": "HID",
+      "label": "Hydro",
+      "current_mw": 461.16,
+      "recommended_mw": 715.81,
+      "delta_mw": 254.65,
+      "cost_usd_mwh": 18.0
+    },
+    {
+      "type": "INT",
+      "label": "Interconnection",
+      "current_mw": 0.0,
+      "recommended_mw": 0.0,
+      "delta_mw": 0.0,
+      "cost_usd_mwh": 35.0
+    },
+    {
+      "type": "TER",
+      "label": "Thermal",
+      "current_mw": 1107.98,
+      "recommended_mw": 714.808,
+      "delta_mw": -393.172,
+      "cost_usd_mwh": 55.0
+    }
+  ],
+  "current_cost_proxy_usd_15min": 17329.108,
+  "recommended_cost_proxy_usd_15min": 13068.917,
+  "note": "Research prototype: RL-style reserve policy plus constrained technology dispatch proxy."
+}

@@ -1,0 +1,193 @@
+timestamp,date,source_code,dataset,series_code,series,forecast_mw
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,356.2
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,340.09
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,330.6
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,326.66
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,324.0
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,333.63
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,322.21
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,354.44
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,394.8
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,414.62
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,423.33
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,424.02
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,411.87
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,410.77
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,412.49
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,415.31
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,411.36
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,451.5
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,466.62
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,457.76
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,442.53
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,420.32
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,390.27
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,SANTA CRUZ,santa_cruz,362.38
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,167.14
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,154.13
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,147.42
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,145.3
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,147.57
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,157.38
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,163.36
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,191.48
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,215.63
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,229.33
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,236.33
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,236.92
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,228.84
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,225.13
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,225.06
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,226.66
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,226.44
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,238.36
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,287.31
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,282.66
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,269.4
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,245.33
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,213.05
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,LA PAZ,la_paz,184.08
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,158.14
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,150.36
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,144.85
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,142.22
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,147.03
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,158.11
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,158.52
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,170.26
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,187.21
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,194.66
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,197.11
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,195.76
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,189.73
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,188.39
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,189.29
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,189.23
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,188.59
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,203.04
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,237.86
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,234.58
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,224.38
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,206.26
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,184.44
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,COCHABAMBA,cochabamba,166.08
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,142.17
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.95
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.08
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,140.7
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.23
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.81
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,137.77
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,137.55
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,140.78
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,143.67
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,142.01
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.91
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,139.75
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.49
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.12
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,139.59
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,143.33
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,149.81
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,158.23
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,158.2
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,156.32
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,153.04
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,147.08
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,POTOSI,potosi,141.29
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,58.62
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,57.34
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,56.35
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,54.68
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,55.45
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,58.72
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,57.99
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,61.62
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,64.71
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,66.14
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,65.69
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,63.53
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,60.01
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,61.21
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,62.79
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,62.47
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,62.81
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,68.91
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,76.16
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,73.61
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,69.84
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,65.63
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,60.71
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,ORURO,oruro,57.82
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,33.41
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,31.42
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,30.22
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,29.95
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,30.49
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,32.38
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,29.91
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,33.53
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,36.86
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,37.92
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,38.37
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,37.95
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,36.47
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,36.25
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,36.34
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,37.95
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,38.81
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,47.09
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,51.83
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,51.27
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,48.67
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,45.39
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,40.79
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,TARIJA,tarija,36.01
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,31.09
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,29.3
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,28.5
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,28.2
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,28.75
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,29.94
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,29.22
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,31.82
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.25
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,35.07
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.99
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.21
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,33.71
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,33.75
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.19
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.82
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,35.42
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,41.19
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,45.87
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,44.82
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,42.58
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,38.95
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,34.81
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,CHUQUISACA,chuquisaca,31.14
+2026-06-06 00:00:00,2026-06-06,4,demand_forecast,BENI,beni,14.67
+2026-06-06 01:00:00,2026-06-06,4,demand_forecast,BENI,beni,13.77
+2026-06-06 02:00:00,2026-06-06,4,demand_forecast,BENI,beni,13.35
+2026-06-06 03:00:00,2026-06-06,4,demand_forecast,BENI,beni,12.81
+2026-06-06 04:00:00,2026-06-06,4,demand_forecast,BENI,beni,12.7
+2026-06-06 05:00:00,2026-06-06,4,demand_forecast,BENI,beni,12.11
+2026-06-06 06:00:00,2026-06-06,4,demand_forecast,BENI,beni,11.53
+2026-06-06 07:00:00,2026-06-06,4,demand_forecast,BENI,beni,13.37
+2026-06-06 08:00:00,2026-06-06,4,demand_forecast,BENI,beni,15.2
+2026-06-06 09:00:00,2026-06-06,4,demand_forecast,BENI,beni,16.38
+2026-06-06 10:00:00,2026-06-06,4,demand_forecast,BENI,beni,17.38
+2026-06-06 11:00:00,2026-06-06,4,demand_forecast,BENI,beni,17.79
+2026-06-06 12:00:00,2026-06-06,4,demand_forecast,BENI,beni,17.52
+2026-06-06 13:00:00,2026-06-06,4,demand_forecast,BENI,beni,17.97
+2026-06-06 14:00:00,2026-06-06,4,demand_forecast,BENI,beni,18.46
+2026-06-06 15:00:00,2026-06-06,4,demand_forecast,BENI,beni,18.83
+2026-06-06 16:00:00,2026-06-06,4,demand_forecast,BENI,beni,18.54
+2026-06-06 17:00:00,2026-06-06,4,demand_forecast,BENI,beni,19.63
+2026-06-06 18:00:00,2026-06-06,4,demand_forecast,BENI,beni,23.01
+2026-06-06 19:00:00,2026-06-06,4,demand_forecast,BENI,beni,22.36
+2026-06-06 20:00:00,2026-06-06,4,demand_forecast,BENI,beni,21.3
+2026-06-06 21:00:00,2026-06-06,4,demand_forecast,BENI,beni,19.75
+2026-06-06 22:00:00,2026-06-06,4,demand_forecast,BENI,beni,17.47
+2026-06-06 23:00:00,2026-06-06,4,demand_forecast,BENI,beni,15.69

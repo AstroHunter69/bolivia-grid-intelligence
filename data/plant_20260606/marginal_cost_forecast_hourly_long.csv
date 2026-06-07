@@ -1,0 +1,25 @@
+timestamp,date,source_code,dataset,series_code,series,cost_usd_mwh
+2026-06-06 00:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 01:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.95
+2026-06-06 02:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 03:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 04:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 05:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 06:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.92
+2026-06-06 07:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.88
+2026-06-06 08:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.9
+2026-06-06 09:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.95
+2026-06-06 10:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.0
+2026-06-06 11:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.0
+2026-06-06 12:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.03
+2026-06-06 13:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.03
+2026-06-06 14:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.0
+2026-06-06 15:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,17.0
+2026-06-06 16:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.98
+2026-06-06 17:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.95
+2026-06-06 18:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.8
+2026-06-06 19:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.78
+2026-06-06 20:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,20.64
+2026-06-06 21:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.76
+2026-06-06 22:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.86
+2026-06-06 23:00:00,2026-06-06,3,marginal_cost_forecast,COS,cos,16.88

@@ -23,7 +23,7 @@ INDEX = """<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bolivia AI Energy Lab</title>
+  <title>Bolivia Grid Intelligence</title>
   <style>
     :root { color-scheme: light; --ink:#1f2933; --muted:#5c6b73; --line:rgba(111,130,139,0.24); --blue:#087f8c; --blue2:#125f74; --green:#2f9e44; --bg:#eef4f1; --panel:rgba(255,255,255,0.80); --shadow:0 18px 50px rgba(33,54,61,0.12); }
     body {
@@ -63,7 +63,7 @@ INDEX = """<!doctype html>
 </head>
 <body>
   <header>
-    <h1>Bolivia AI Energy Lab</h1>
+    <h1>Bolivia Grid Intelligence</h1>
     <p>Local research prototype for CNDC data collection, Bolivia Demand Model forecasting, reinforcement learning dispatch support, and plant-level optimization.</p>
     <nav class="tabs">
       <button class="tab active" data-tab="forecast">Forecast</button>
@@ -619,7 +619,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main() -> None:
     server = ThreadingHTTPServer(("127.0.0.1", 8765), Handler)
-    print("Bolivia AI Energy Lab running at http://127.0.0.1:8765")
+    print("Bolivia Grid Intelligence running at http://127.0.0.1:8765")
     server.serve_forever()
 
 

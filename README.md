@@ -56,7 +56,15 @@ Then open:
 http://127.0.0.1:8765
 ```
 
-The local dashboard can run data collection, forecasts, plant-level optimization, real-time dispatch recommendations, and RL experiments.
+The root URL opens a bundled interactive demo dashboard first. It includes a prebuilt June 2026 dispatch-optimization run, forecast comparisons, a plant map, and a real-time RL recommendation snapshot so the project can be reviewed immediately after cloning.
+
+The local runner/control panel is still available here:
+
+```text
+http://127.0.0.1:8765/lab
+```
+
+Use `/lab` to run new data collection, forecasts, plant-level optimization, real-time dispatch recommendations, and RL experiments. New forecast dates require the local model files described below.
 
 ## Forecasting
 
@@ -75,6 +83,8 @@ Expected local model files:
 models/bolivia_demand_model.pkl
 models/bolivia_demand_features.pkl
 ```
+
+The public repository includes a small set of precomputed forecast outputs so the interactive demo can compare real demand, CNDC forecast, and the Bolivia Demand Model without requiring the model binary on first launch. To generate new dates, place the model files above in `models/`.
 
 Example:
 

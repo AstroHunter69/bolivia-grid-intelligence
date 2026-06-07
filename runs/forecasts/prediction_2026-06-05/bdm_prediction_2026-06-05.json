@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "target_date": "2026-06-05",
+    "lookback_days": 21,
+    "history_start": "2026-05-15 00:00:00",
+    "history_end": "2026-06-04 23:45:00",
+    "target_start": "2026-06-05 00:00:00",
+    "target_end": "2026-06-05 23:45:00",
+    "target_predictions": 96,
+    "nowcast_rows_filled_before_target": 2,
+    "historical_gap_rows_repaired": 37,
+    "latest_real_actual_timestamp": "2026-06-04 23:15:00",
+    "forecast_sources": {
+      "2026-05-15": "cndc",
+      "2026-05-16": "cndc",
+      "2026-05-17": "cndc",
+      "2026-05-18": "cndc",
+      "2026-05-19": "cndc",
+      "2026-05-20": "cndc",
+      "2026-05-21": "cndc",
+      "2026-05-22": "cndc",
+      "2026-05-23": "cndc",
+      "2026-05-24": "cndc",
+      "2026-05-25": "cndc",
+      "2026-05-26": "cndc",
+      "2026-05-27": "cndc",
+      "2026-05-28": "cndc",
+      "2026-05-29": "cndc",
+      "2026-05-30": "cndc",
+      "2026-05-31": "cndc",
+      "2026-06-01": "cndc",
+      "2026-06-02": "cndc",
+      "2026-06-03": "cndc",
+      "2026-06-04": "cndc",
+      "2026-06-05": "cndc"
+    },
+    "model_path": "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/models/bolivia_demand_model.pkl",
+    "features_path": "/Users/emanuel/Documents/Codex/2026-05-30/hey-so-i-m-working-on/github_release/bolivia-grid-intelligence/models/bolivia_demand_features.pkl"
+  },
+  "predictions": [
+    {
+      "timestamp": "2026-06-05T00:00:00",
+      "predicted_demand_mw": 1043.2904052734375,
+      "cndc_forecast_total_mw": 959.03,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T00:15:00",
+      "predicted_demand_mw": 1019.5634155273438,
+      "cndc_forecast_total_mw": 947.3575000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T00:30:00",
+      "predicted_demand_mw": 1007.6116943359375,
+      "cndc_forecast_total_mw": 935.6850000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T00:45:00",
+      "predicted_demand_mw": 985.207763671875,
+      "cndc_forecast_total_mw": 924.0125,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T01:00:00",
+      "predicted_demand_mw": 986.832763671875,
+      "cndc_forecast_total_mw": 912.34,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T01:15:00",
+      "predicted_demand_mw": 975.9652709960938,
+      "cndc_forecast_total_mw": 904.675,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T01:30:00",
+      "predicted_demand_mw": 969.0278930664062,
+      "cndc_forecast_total_mw": 897.0100000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T01:45:00",
+      "predicted_demand_mw": 967.5308837890625,
+      "cndc_forecast_total_mw": 889.345,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T02:00:00",
+      "predicted_demand_mw": 966.5352783203125,
+      "cndc_forecast_total_mw": 881.68,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T02:15:00",
+      "predicted_demand_mw": 957.21337890625,
+      "cndc_forecast_total_mw": 878.0649999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T02:30:00",
+      "predicted_demand_mw": 955.4024658203125,
+      "cndc_forecast_total_mw": 874.4499999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T02:45:00",
+      "predicted_demand_mw": 961.9813232421875,
+      "cndc_forecast_total_mw": 870.835,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T03:00:00",
+      "predicted_demand_mw": 939.661376953125,
+      "cndc_forecast_total_mw": 867.2199999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T03:15:00",
+      "predicted_demand_mw": 940.7321166992188,
+      "cndc_forecast_total_mw": 866.045,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T03:30:00",
+      "predicted_demand_mw": 937.4530639648438,
+      "cndc_forecast_total_mw": 864.87,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T03:45:00",
+      "predicted_demand_mw": 943.3057250976562,
+      "cndc_forecast_total_mw": 863.695,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T04:00:00",
+      "predicted_demand_mw": 939.5552368164062,
+      "cndc_forecast_total_mw": 862.5200000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T04:15:00",
+      "predicted_demand_mw": 938.1161499023438,
+      "cndc_forecast_total_mw": 866.705,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T04:30:00",
+      "predicted_demand_mw": 944.4954223632812,
+      "cndc_forecast_total_mw": 870.89,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T04:45:00",
+      "predicted_demand_mw": 950.012451171875,
+      "cndc_forecast_total_mw": 875.0750000000002,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T05:00:00",
+      "predicted_demand_mw": 940.9878540039062,
+      "cndc_forecast_total_mw": 879.2600000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T05:15:00",
+      "predicted_demand_mw": 941.2277221679688,
+      "cndc_forecast_total_mw": 868.035,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T05:30:00",
+      "predicted_demand_mw": 945.5654296875,
+      "cndc_forecast_total_mw": 856.8100000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T05:45:00",
+      "predicted_demand_mw": 941.0740356445312,
+      "cndc_forecast_total_mw": 845.5849999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T06:00:00",
+      "predicted_demand_mw": 958.851318359375,
+      "cndc_forecast_total_mw": 834.3599999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T06:15:00",
+      "predicted_demand_mw": 940.1793212890625,
+      "cndc_forecast_total_mw": 844.2375000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T06:30:00",
+      "predicted_demand_mw": 933.9708251953125,
+      "cndc_forecast_total_mw": 854.115,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T06:45:00",
+      "predicted_demand_mw": 935.1838989257812,
+      "cndc_forecast_total_mw": 863.9925,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T07:00:00",
+      "predicted_demand_mw": 926.3495483398438,
+      "cndc_forecast_total_mw": 873.8699999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T07:15:00",
+      "predicted_demand_mw": 934.6923217773438,
+      "cndc_forecast_total_mw": 890.1875000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T07:30:00",
+      "predicted_demand_mw": 954.2467651367188,
+      "cndc_forecast_total_mw": 906.505,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T07:45:00",
+      "predicted_demand_mw": 969.3505859375,
+      "cndc_forecast_total_mw": 922.8225,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T08:00:00",
+      "predicted_demand_mw": 967.9376831054688,
+      "cndc_forecast_total_mw": 939.1400000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T08:15:00",
+      "predicted_demand_mw": 984.84521484375,
+      "cndc_forecast_total_mw": 948.8275,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T08:30:00",
+      "predicted_demand_mw": 992.8888549804688,
+      "cndc_forecast_total_mw": 958.515,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T08:45:00",
+      "predicted_demand_mw": 1011.36181640625,
+      "cndc_forecast_total_mw": 968.2025,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T09:00:00",
+      "predicted_demand_mw": 1013.355712890625,
+      "cndc_forecast_total_mw": 977.8900000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T09:15:00",
+      "predicted_demand_mw": 1023.76123046875,
+      "cndc_forecast_total_mw": 984.4074999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T09:30:00",
+      "predicted_demand_mw": 1039.0377197265625,
+      "cndc_forecast_total_mw": 990.925,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T09:45:00",
+      "predicted_demand_mw": 1044.0260009765625,
+      "cndc_forecast_total_mw": 997.4425,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T10:00:00",
+      "predicted_demand_mw": 1054.1370849609375,
+      "cndc_forecast_total_mw": 1003.96,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T10:15:00",
+      "predicted_demand_mw": 1058.735595703125,
+      "cndc_forecast_total_mw": 1007.2449999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T10:30:00",
+      "predicted_demand_mw": 1067.13916015625,
+      "cndc_forecast_total_mw": 1010.5300000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T10:45:00",
+      "predicted_demand_mw": 1082.7154541015625,
+      "cndc_forecast_total_mw": 1013.815,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T11:00:00",
+      "predicted_demand_mw": 1093.467529296875,
+      "cndc_forecast_total_mw": 1017.0999999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T11:15:00",
+      "predicted_demand_mw": 1094.5721435546875,
+      "cndc_forecast_total_mw": 1013.8775,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T11:30:00",
+      "predicted_demand_mw": 1095.34765625,
+      "cndc_forecast_total_mw": 1010.6550000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T11:45:00",
+      "predicted_demand_mw": 1088.754150390625,
+      "cndc_forecast_total_mw": 1007.4325,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T12:00:00",
+      "predicted_demand_mw": 1080.0162353515625,
+      "cndc_forecast_total_mw": 1004.21,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T12:15:00",
+      "predicted_demand_mw": 1078.1265869140625,
+      "cndc_forecast_total_mw": 1005.3625000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T12:30:00",
+      "predicted_demand_mw": 1077.04150390625,
+      "cndc_forecast_total_mw": 1006.515,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T12:45:00",
+      "predicted_demand_mw": 1088.584228515625,
+      "cndc_forecast_total_mw": 1007.6674999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T13:00:00",
+      "predicted_demand_mw": 1087.36669921875,
+      "cndc_forecast_total_mw": 1008.8199999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T13:15:00",
+      "predicted_demand_mw": 1098.6788330078125,
+      "cndc_forecast_total_mw": 1013.225,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T13:30:00",
+      "predicted_demand_mw": 1109.998046875,
+      "cndc_forecast_total_mw": 1017.63,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T13:45:00",
+      "predicted_demand_mw": 1108.6630859375,
+      "cndc_forecast_total_mw": 1022.035,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T14:00:00",
+      "predicted_demand_mw": 1102.8128662109375,
+      "cndc_forecast_total_mw": 1026.44,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T14:15:00",
+      "predicted_demand_mw": 1106.0323486328125,
+      "cndc_forecast_total_mw": 1030.085,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T14:30:00",
+      "predicted_demand_mw": 1099.029296875,
+      "cndc_forecast_total_mw": 1033.73,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T14:45:00",
+      "predicted_demand_mw": 1092.528076171875,
+      "cndc_forecast_total_mw": 1037.375,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T15:00:00",
+      "predicted_demand_mw": 1111.7449951171875,
+      "cndc_forecast_total_mw": 1041.02,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T15:15:00",
+      "predicted_demand_mw": 1113.0574951171875,
+      "cndc_forecast_total_mw": 1044.5175,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T15:30:00",
+      "predicted_demand_mw": 1113.4365234375,
+      "cndc_forecast_total_mw": 1048.0149999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T15:45:00",
+      "predicted_demand_mw": 1116.42333984375,
+      "cndc_forecast_total_mw": 1051.5125,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T16:00:00",
+      "predicted_demand_mw": 1132.2025146484375,
+      "cndc_forecast_total_mw": 1055.01,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T16:15:00",
+      "predicted_demand_mw": 1148.0030517578125,
+      "cndc_forecast_total_mw": 1084.71,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T16:30:00",
+      "predicted_demand_mw": 1191.7039794921875,
+      "cndc_forecast_total_mw": 1114.41,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T16:45:00",
+      "predicted_demand_mw": 1204.8292236328125,
+      "cndc_forecast_total_mw": 1144.11,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T17:00:00",
+      "predicted_demand_mw": 1209.095703125,
+      "cndc_forecast_total_mw": 1173.81,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T17:15:00",
+      "predicted_demand_mw": 1212.8709716796875,
+      "cndc_forecast_total_mw": 1207.3625000000002,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T17:30:00",
+      "predicted_demand_mw": 1245.44580078125,
+      "cndc_forecast_total_mw": 1240.9150000000002,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T17:45:00",
+      "predicted_demand_mw": 1327.177001953125,
+      "cndc_forecast_total_mw": 1274.4675000000002,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T18:00:00",
+      "predicted_demand_mw": 1315.8216552734375,
+      "cndc_forecast_total_mw": 1308.02,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T18:15:00",
+      "predicted_demand_mw": 1350.100830078125,
+      "cndc_forecast_total_mw": 1305.775,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T18:30:00",
+      "predicted_demand_mw": 1346.1168212890625,
+      "cndc_forecast_total_mw": 1303.5299999999997,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T18:45:00",
+      "predicted_demand_mw": 1352.3572998046875,
+      "cndc_forecast_total_mw": 1301.2849999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T19:00:00",
+      "predicted_demand_mw": 1360.3519287109375,
+      "cndc_forecast_total_mw": 1299.04,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T19:15:00",
+      "predicted_demand_mw": 1345.27197265625,
+      "cndc_forecast_total_mw": 1289.5625,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T19:30:00",
+      "predicted_demand_mw": 1319.389404296875,
+      "cndc_forecast_total_mw": 1280.085,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T19:45:00",
+      "predicted_demand_mw": 1308.8704833984375,
+      "cndc_forecast_total_mw": 1270.6075,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T20:00:00",
+      "predicted_demand_mw": 1315.7366943359375,
+      "cndc_forecast_total_mw": 1261.13,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T20:15:00",
+      "predicted_demand_mw": 1269.1041259765625,
+      "cndc_forecast_total_mw": 1240.1825000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T20:30:00",
+      "predicted_demand_mw": 1250.342529296875,
+      "cndc_forecast_total_mw": 1219.2350000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T20:45:00",
+      "predicted_demand_mw": 1229.1451416015625,
+      "cndc_forecast_total_mw": 1198.2875,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T21:00:00",
+      "predicted_demand_mw": 1253.2904052734375,
+      "cndc_forecast_total_mw": 1177.3400000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T21:15:00",
+      "predicted_demand_mw": 1237.5172119140625,
+      "cndc_forecast_total_mw": 1148.3075000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T21:30:00",
+      "predicted_demand_mw": 1195.155029296875,
+      "cndc_forecast_total_mw": 1119.2749999999999,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T21:45:00",
+      "predicted_demand_mw": 1139.9110107421875,
+      "cndc_forecast_total_mw": 1090.2424999999998,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T22:00:00",
+      "predicted_demand_mw": 1143.1971435546875,
+      "cndc_forecast_total_mw": 1061.21,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T22:15:00",
+      "predicted_demand_mw": 1114.0040283203125,
+      "cndc_forecast_total_mw": 1035.7175,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T22:30:00",
+      "predicted_demand_mw": 1099.2515869140625,
+      "cndc_forecast_total_mw": 1010.225,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T22:45:00",
+      "predicted_demand_mw": 1047.732666015625,
+      "cndc_forecast_total_mw": 984.7325000000001,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T23:00:00",
+      "predicted_demand_mw": 1053.531005859375,
+      "cndc_forecast_total_mw": 959.24,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T23:15:00",
+      "predicted_demand_mw": 1035.3621826171875,
+      "cndc_forecast_total_mw": 959.24,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T23:30:00",
+      "predicted_demand_mw": 978.4509887695312,
+      "cndc_forecast_total_mw": 959.24,
+      "is_recursive_fill": true
+    },
+    {
+      "timestamp": "2026-06-05T23:45:00",
+      "predicted_demand_mw": 972.6356811523438,
+      "cndc_forecast_total_mw": 959.24,
+      "is_recursive_fill": true
+    }
+  ]
+}
