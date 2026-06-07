@@ -235,6 +235,36 @@ def parse_float(value: object) -> float | None:
     return number
 
 
+def actual_demand_from_payload(payload: list[dict]) -> list[float | None]:
+    totals = [0.0] * 96
+    counts = [0] * 96
+    for record in payload:
+        code = str(record.get("codigo") or "").strip().upper()
+        if code.startswith("PREV"):
+            continue
+        for idx, value in enumerate(record.get("valores", [])[:96]):
+            number = parse_float(value)
+            if number is not None:
+                totals[idx] += number
+                counts[idx] += 1
+    return [totals[i] if counts[i] else None for i in range(96)]
+
+
+def cached_actual_demand(date_str: str) -> list[float | None] | None:
+    candidates = [
+        OUTPUTS_ROOT / "data" / "cache" / f"code1_{date_str}.json",
+        OUTPUTS_ROOT / "data" / "cache" / f"webapi_code1_{date_str}.json",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
+        payload = json.loads(path.read_text())
+        actual = actual_demand_from_payload(payload)
+        if any(value is not None for value in actual):
+            return actual
+    return None
+
+
 def fetch_actual_demand(date_str: str) -> list[float | None]:
     api_date = date.fromisoformat(date_str).strftime("%d.%m.%Y")
     url = CNDC_API + "?" + urllib.parse.urlencode({"code": 1, "Fecha": api_date})
@@ -249,19 +279,7 @@ def fetch_actual_demand(date_str: str) -> list[float | None]:
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.loads(response.read().decode("utf-8"))
-
-    totals = [0.0] * 96
-    counts = [0] * 96
-    for record in payload:
-        code = str(record.get("codigo") or "").strip().upper()
-        if code.startswith("PREV"):
-            continue
-        for idx, value in enumerate(record.get("valores", [])[:96]):
-            number = parse_float(value)
-            if number is not None:
-                totals[idx] += number
-                counts[idx] += 1
-    return [totals[i] if counts[i] else None for i in range(96)]
+    return actual_demand_from_payload(payload)
 
 
 def local_actual_demand(target_date: str) -> list[float | None] | None:
@@ -280,7 +298,7 @@ def local_actual_demand(target_date: str) -> list[float | None] | None:
                 rows.append(parse_float(value))
         if rows:
             return (rows + [None] * 96)[:96]
-    return None
+    return cached_actual_demand(target_date)
 
 
 def forecast_payload(target_date: str) -> dict | None:
@@ -351,7 +369,7 @@ def make_forecast_dashboard(target_date: str) -> Path | None:
     .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; }
     .controls { display:flex; gap:12px; align-items:center; margin-top:12px; }
     input[type=range] { width:100%; }
-    .time { min-width:150px; color:#0b7285; font-weight:750; }
+    .time { flex:0 0 170px; min-width:170px; color:#0b7285; font-weight:750; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
     .datebar { display:flex; flex-wrap:wrap; gap:10px; align-items:end; margin-bottom:16px; }
     .datebar label { display:grid; gap:4px; color:#60717d; font-size:12px; font-weight:650; }
     .datebar input { height:34px; border:1px solid #b8c4ca; border-radius:6px; padding:0 9px; background:white; }

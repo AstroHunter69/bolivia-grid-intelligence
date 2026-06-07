@@ -262,7 +262,7 @@ HTML_TEMPLATE = """<!doctype html>
     .datebar button { height:36px; border:0; border-radius:8px; padding:0 13px; background:linear-gradient(135deg,var(--blue),var(--blue2)); color:white; font-weight:750; cursor:pointer; box-shadow:0 8px 20px rgba(8,127,140,0.20); }
     button:disabled { opacity:.62; cursor:wait; }
     input[type=range] { width:100%; accent-color:var(--blue); }
-    .time { min-width:150px; font-weight:750; color:var(--blue); }
+    .time { flex:0 0 170px; min-width:170px; font-weight:750; color:var(--blue); text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
     .legend { display:flex; flex-wrap:wrap; gap:10px; margin-top:9px; color:var(--muted); font-size:12px; }
     .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; }
     .switches { display:flex; flex-wrap:wrap; gap:12px; margin:6px 0 10px; color:var(--muted); font-size:13px; }
